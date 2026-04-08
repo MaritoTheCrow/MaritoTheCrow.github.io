@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR OSCURA -->
+  <div class="top-bar">
+    CORPORATE FINANCE &nbsp;|&nbsp; VALUATIONS &nbsp;|&nbsp; CAPITAL MARKETS
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <img src="/assets/logo.png" alt="MCB Advisor Logo" class="logo">
+      <div class="header-text">
+        <h1 class="site-title">MCB Advisor</h1>
+        <p class="site-subtitle">Financial Advisory & Strategic Intelligence</p>
+      </div>
+      <div class="header-actions">
+        <a href="/subscribe" class="btn-subscribe">Subscribe</a>
+        <a href="/admin" class="btn-signin">Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="/ma">M&A</a></li>
+      <li><a href="/valuations">Valuations & Capital Markets</a></li>
+      <li><a href="/corporate">Corporate Finance</a></li>
+      <li><a href="/operative">Operative Finance</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/about#contact">Contact</a></li>
+      <li><a href="/documents">Reports & Downloads</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <main class="main-content">
+    {{ content }}
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2025 MCB Advisor — Posadas, Misiones</p>
+    <p>"In God we trust, all others must bring data."</p>
+  </footer>
+
+</body>
+</html>
