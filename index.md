@@ -8,21 +8,20 @@ title: MCB Advisor | Estrategia y Finanzas
 
 ---
 
-## 🏦 Servicios Principales
-* **M&A**: Asesoramiento integral en procesos de compra, venta y fusión de empresas.
-* **Valuations & Capital Markets**: Valuación técnica de activos y análisis del Merval.
-* **Corporate Finance**: Estructuración de capital y optimización financiera.
-* **Operative Finance**: Gestión de flujo de caja basada en datos.
+## Servicios
+- [M&A](ma)
+- [Valuations & Capital Markets](valuations)
+- [Corporate Finance](corporate)
+- [Operative Finance](operative)
 
 ---
 
-## 📂 [Archivo de Consultoría / Reportes](documents)
-Acceda a nuestros informes técnicos de Agrometal, Aluar y modelos de gestión.
+## [📂 Documentos y Reportes](documents)
 
 ---
 
-## ✉️ Sobre nosotros / Contacto
-**MCB Advisor** es una consultoría boutique basada en Posadas, Misiones, enfocada en soluciones financieras de alta complejidad.
+## [✉️ About / Contacto](about)
 
 ---
+
 > "In God we trust, all others must bring data."
