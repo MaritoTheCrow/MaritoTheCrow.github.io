@@ -1,0 +1,171 @@
+/* =====================
+   RESET & BASE
+===================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: rgb(245, 240, 235);
+  color: rgb(80, 4, 4);
+}
+
+/* =====================
+   TOP BAR
+===================== */
+.top-bar {
+  background-color: rgb(26, 27, 31);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 8px 20px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* =====================
+   HEADER
+===================== */
+.site-header {
+  background-color: rgba(231, 196, 187, 0.94);
+  border-bottom: 1px solid rgb(228, 235, 243);
+  padding: 30px 40px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.header-text {
+  text-align: center;
+  flex: 1;
+  padding: 0 20px;
+}
+
+.site-title {
+  font-size: 64px;
+  font-weight: 700;
+  color: rgb(80, 4, 4);
+  line-height: 1;
+}
+
+.site-subtitle {
+  font-family: 'Times New Roman', serif;
+  color: rgb(192, 25, 28);
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-subscribe {
+  background-color: rgb(26, 27, 31);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn-signin {
+  color: rgb(80, 4, 4);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  background-color: rgba(231, 196, 187, 0.94);
+  border-top: 1px solid rgb(210, 180, 170);
+  border-bottom: 2px solid rgb(192, 25, 28);
+  padding: 0 40px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  display: block;
+  padding: 12px 0;
+  text-decoration: none;
+  color: rgb(80, 4, 4);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: Georgia, serif;
+}
+
+.navbar ul li a:hover {
+  color: rgb(192, 25, 28);
+  border-bottom: 2px solid rgb(192, 25, 28);
+}
+
+/* =====================
+   MAIN CONTENT
+===================== */
+.main-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 40px;
+}
+
+h1, h2, h3 {
+  color: rgb(80, 4, 4);
+  font-family: Georgia, serif;
+}
+
+h2 { 
+  font-size: 28px; 
+  margin: 30px 0 15px;
+  border-bottom: 1px solid rgb(236, 218, 213);
+  padding-bottom: 8px;
+}
+
+a { color: rgb(192, 25, 28); }
+a:hover { color: rgb(80, 4, 4); }
+
+ul { padding-left: 20px; line-height: 2; }
+
+/* =====================
+   FOOTER
+===================== */
+.site-footer {
+  background-color: rgb(26, 27, 31);
+  color: rgb(200, 200, 200);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 13px;
+  line-height: 2;
+  margin-top: 60px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 767px) {
+  .site-title { font-size: 36px; }
+  .header-inner { flex-direction: column; gap: 15px; }
+  .navbar ul { flex-wrap: wrap; gap: 10px; }
+  .main-content { padding: 0 15px; }
+}
