@@ -17,7 +17,7 @@ body {
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 8px 20px;
-  font-size: 11px;
+  font-size: 22px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -62,7 +62,7 @@ body {
 .site-subtitle {
   font-family: 'Times New Roman', serif;
   color: rgb(192, 25, 28);
-  font-size: 18px;
+  font-size: 36px;
   margin-top: 8px;
 }
 
@@ -72,12 +72,23 @@ body {
   align-items: center;
 }
 
+.btn-home {
+  background-color: #8B0000;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
 .btn-subscribe {
   background-color: rgb(26, 27, 31);
   color: white;
   padding: 10px 20px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 24px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -85,7 +96,7 @@ body {
 .btn-signin {
   color: rgb(80, 4, 4);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 26px;
 }
 
 /* =====================
@@ -111,7 +122,7 @@ body {
   padding: 12px 0;
   text-decoration: none;
   color: rgb(80, 4, 4);
-  font-size: 13px;
+  font-size: 26px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: Georgia, serif;
@@ -137,7 +148,7 @@ h1, h2, h3 {
 }
 
 h2 { 
-  font-size: 28px; 
+  font-size: 56px; 
   margin: 30px 0 15px;
   border-bottom: 1px solid rgb(236, 218, 213);
   padding-bottom: 8px;
@@ -146,7 +157,9 @@ h2 {
 a { color: rgb(192, 25, 28); }
 a:hover { color: rgb(80, 4, 4); }
 
-ul { padding-left: 20px; line-height: 2; }
+ul { padding-left: 20px; line-height: 2; font-size: 26px; }
+
+p { font-size: 26px; }
 
 /* =====================
    FOOTER
@@ -156,7 +169,7 @@ ul { padding-left: 20px; line-height: 2; }
   color: rgb(200, 200, 200);
   text-align: center;
   padding: 30px 20px;
-  font-size: 13px;
+  font-size: 26px;
   line-height: 2;
   margin-top: 60px;
 }
