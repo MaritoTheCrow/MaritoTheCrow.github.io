@@ -1,6 +1,7 @@
 ---
 layout: default
-title: MCB Advisor | Estrategia y Finanzas
+title: MCB Advisor | Strategy and Finance
+lang: es
+service_cards: true
 ---
 
-Bienvenido a MCB Advisor. Seleccioná un servicio del menú para comenzar.

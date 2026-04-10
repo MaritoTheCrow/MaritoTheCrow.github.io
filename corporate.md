@@ -5,15 +5,15 @@ title: Corporate Finance
 
 # Corporate Finance
 
-Estructuración de capital y optimización financiera para empresas locales.
+Capital structuring and financial optimization for local companies.
 
 ---
 
-- Optimización de deuda
-- Costo de capital (WACC)
-- Estructura de financiamiento
-- Planificación financiera
+- Debt optimization
+- Cost of capital (WACC)
+- Financing structure
+- Financial planning
 
 ---
 
-[⬅️ Volver al Inicio](index)
+[⬅️ Back to Home](index)

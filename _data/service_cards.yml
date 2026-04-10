@@ -1,0 +1,36 @@
+# Home page cards (below header). Image paths: site-relative or https URL.
+- id: profile
+  title: Mario Cesar Bogado
+  role: Sr Financial Analyst
+  image: /assets/images/cards/profile.jpg
+  cta_href: "https://www.linkedin.com/in/mario-bogado-702a9a17/"
+  cta_label: LinkedIn
+  external: true
+
+- id: valuations
+  title: Valuations
+  body: "Bienvenido a MCB Advisor. Seleccioná un servicio del menú para comenzar."
+  image: "https://images.unsplash.com/photo-1521737711867-e3b75a2c3a5b?auto=format&fit=crop&w=640&q=80"
+  cta_href: /valuations/
+  cta_label: How we can help you
+
+- id: diligence
+  title: Due diligence
+  body: "Investigation and analysis before transactions to surface risks, liabilities, and value drivers."
+  image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=640&q=80"
+  cta_href: /ma/
+  cta_label: How we can help you
+
+- id: operational
+  title: Operational finance
+  body: "Day-to-day financial operations, efficiency, liquidity, and short-term planning."
+  image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=640&q=80"
+  cta_href: /operative/
+  cta_label: How we can help you
+
+- id: investment
+  title: Investment projects
+  body: "Allocating capital to initiatives that support growth and strategic objectives."
+  image: "https://images.unsplash.com/photo-1520607162513-77705c0f96d0?auto=format&fit=crop&w=640&q=80"
+  cta_href: /corporate/
+  cta_label: How we can help you

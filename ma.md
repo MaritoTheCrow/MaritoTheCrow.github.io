@@ -4,17 +4,17 @@ title: M&A
 ---
 
 # M&A
-### Fusiones y Adquisiciones
+### Mergers & acquisitions
 
-Asesoramiento integral en procesos de compra, venta y fusión de empresas.
-
----
-
-- Identificación y valuación de targets
-- Estructuración de deals
-- Due diligence financiero
-- Negociación y cierre
+End-to-end advisory on buy-side, sell-side, and merger processes.
 
 ---
 
-[⬅️ Volver al Inicio](index)
+- Target identification and valuation
+- Deal structuring
+- Financial due diligence
+- Negotiation and closing
+
+---
+
+[⬅️ Back to Home](index)

@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  {% assign meta_title = page.title | default: site.title %}
+  {% assign meta_desc = page.description | default: site.subtitle | default: site.description %}
+  <title>{{ meta_title }}</title>
+  <meta name="description" content="{{ meta_desc | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ meta_title | escape }}">
+  <meta property="og:description" content="{{ meta_desc | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="{{ '/Logo.png' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1a1b1f">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
 
- <!-- BARRA SUPERIOR OSCURA -->
+ <!-- Dark top bar -->
 <div class="top-bar">
   CORPORATE FINANCE &nbsp;|&nbsp; VALUATIONS &nbsp;|&nbsp; CAPITAL MARKETS
   <div class="top-bar-actions">
@@ -22,12 +34,44 @@
 <header class="site-header">
   <div class="header-inner">
     <div class="title-logo-wrap">
-      <img src="/Logo.png" alt="MCB Advisor Logo" class="logo">
+      <img src="{{ '/Logo.png' | relative_url }}" alt="MCB Advisor Logo" class="logo">
       <h1 class="site-title">MCB Advisor</h1>
     </div>
-    <p class="site-subtitle">Financial Advisory & Strategic Intelligence</p>
+    <p class="site-subtitle">{{ site.subtitle }}</p>
   </div>
 </header>
+
+  {% if page.service_cards and site.data.service_cards %}
+  <section class="service-cards" aria-label="Services">
+    <div class="service-cards-inner">
+      {% for card in site.data.service_cards %}
+      <article class="service-card">
+        <div class="service-card-image-wrap">
+          {% if card.image contains 'http' %}
+          <img class="service-card-image" src="{{ card.image }}" alt="" width="640" height="400" loading="lazy" decoding="async">
+          {% else %}
+          <img class="service-card-image" src="{{ card.image | relative_url }}" alt="" width="640" height="400" loading="lazy" decoding="async">
+          {% endif %}
+        </div>
+        <h2 class="service-card-title">{{ card.title }}</h2>
+        {% if card.role %}
+        <p class="service-card-role">{{ card.role }}</p>
+        {% endif %}
+        {% if card.body %}
+        <p class="service-card-body">{{ card.body }}</p>
+        {% endif %}
+        {% assign cta = card.cta_href %}
+        {% if card.external != true %}
+          {% assign cta = card.cta_href | relative_url %}
+        {% endif %}
+        {% if card.cta_label %}
+        <a class="service-card-cta" href="{{ cta }}"{% if card.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ card.cta_label }} <span class="service-card-cta-arrow" aria-hidden="true">→</span></a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 
   <!-- NAVBAR -->
   <nav class="navbar">
@@ -42,14 +86,15 @@
     </ul>
   </nav>
 
-  <!-- CONTENIDO -->
+  <!-- Main content -->
   <main class="main-content">
     {{ content }}
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2025 MCB Advisor — Posadas, Misiones</p>
+    <p>&copy; 2026 MCB Advisor — Posadas, Misiones, Argentina</p>
+    <p><a href="mailto:{{ site.email_primary }}">{{ site.email_primary }}</a></p>
     <p>"In God we trust, all others must bring data."</p>
   </footer>
 

@@ -5,15 +5,15 @@ title: Operative Finance
 
 # Operative Finance
 
-Gestión de flujo de caja basada en datos.
+Data-driven cash flow management.
 
 ---
 
-- Cash flow operativo
-- Proyecciones de corto plazo
-- KPIs financieros
-- Gestión de capital de trabajo
+- Operating cash flow
+- Short-term projections
+- Financial KPIs
+- Working capital management
 
 ---
 
-[⬅️ Volver al Inicio](index)
+[⬅️ Back to Home](index)

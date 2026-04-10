@@ -5,15 +5,15 @@ title: Valuations & Capital Markets
 
 # Valuations & Capital Markets
 
-Valuación técnica de activos y análisis del mercado de capitales local.
+Technical asset valuation and analysis of the local capital markets.
 
 ---
 
-- DCF y modelos de flujo de fondos
-- Análisis Merval (Agrometal, Aluar, etc.)
-- Comparables de mercado
-- Sensibilidad de variables
+- DCF and cash flow models
+- Merval analysis (Agrometal, Aluar, etc.)
+- Market comparables
+- Variable sensitivity
 
 ---
 
-[⬅️ Volver al Inicio](index)
+[⬅️ Back to Home](index)

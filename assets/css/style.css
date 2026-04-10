@@ -5,7 +5,7 @@
 
 body {
   font-family: Georgia, 'Times New Roman', serif;
-  background-color: rgb(245, 240, 235);
+  background-color: #ecdad5;
   color: rgb(80, 4, 4);
 }
 
@@ -65,7 +65,7 @@ body {
    HEADER
 ===================== */
 .site-header {
-  background-color: rgba(231, 196, 187, 0.94);
+  background-color: #ecdad5;
   border-bottom: 1px solid rgb(228, 235, 243);
   padding: 30px 40px;
   text-align: center;
@@ -79,7 +79,7 @@ body {
   margin: 0 auto;
 }
 
-/* Logo pegado arriba a la izquierda del título */
+/* Logo offset top-left of the title */
 .title-logo-wrap {
   position: relative;
   display: inline-block;
@@ -105,16 +105,20 @@ body {
 .site-subtitle {
   font-family: 'Times New Roman', serif;
   color: rgb(192, 25, 28);
-  font-size: 36px;
-  margin-top: 8px;
+  font-size: 26px;
+  line-height: 1.35;
+  margin-top: 12px;
   text-align: center;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =====================
    NAVBAR
 ===================== */
 .navbar {
-  background-color: rgba(231, 196, 187, 0.94);
+  background-color: #ecdad5;
   border-top: 1px solid rgb(210, 180, 170);
   border-bottom: 2px solid rgb(192, 25, 28);
   padding: 0 40px;
@@ -149,6 +153,103 @@ body {
 }
 
 /* =====================
+   SERVICE CARDS (home)
+===================== */
+.service-cards {
+  background-color: #ecdad5;
+  padding: 24px 20px 32px;
+  border-bottom: 1px solid rgb(210, 180, 170);
+}
+
+.service-cards-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(80, 4, 4, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(80, 4, 4, 0.08);
+}
+
+.service-card-image-wrap {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #e8e0dc;
+}
+
+.service-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card .service-card-title {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: rgb(192, 25, 28);
+  text-align: center;
+  margin: 14px 12px 6px;
+  line-height: 1.25;
+  text-transform: none;
+  letter-spacing: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.service-card-role {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgb(192, 25, 28);
+  text-align: center;
+  margin: 0 12px 8px;
+}
+
+.service-card-body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: rgb(60, 50, 50);
+  text-align: left;
+  margin: 0 14px 14px;
+  flex: 1 1 auto;
+}
+
+.service-card-cta {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgb(80, 4, 4);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 14px 16px;
+  align-self: flex-start;
+}
+
+.service-card-cta:hover {
+  color: rgb(192, 25, 28);
+}
+
+.service-card-cta-arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* =====================
    MAIN CONTENT
 ===================== */
 .main-content {
@@ -162,7 +263,7 @@ h1, h2, h3 {
   font-family: Georgia, serif;
 }
 
-h2 {
+.main-content h2 {
   font-size: 56px;
   margin: 30px 0 15px;
   border-bottom: 1px solid rgb(236, 218, 213);
@@ -170,13 +271,13 @@ h2 {
   text-align: center;
 }
 
-h3 {
+.main-content h3 {
   font-size: 40px;
   text-align: center;
   margin: 20px 0 10px;
 }
 
-p {
+.main-content p {
   font-size: 26px;
   text-align: center;
 }
@@ -199,14 +300,47 @@ ul { padding-left: 20px; line-height: 2; font-size: 26px; }
   margin-top: 60px;
 }
 
+.site-footer a {
+  color: rgb(220, 200, 200);
+}
+
+.site-footer a:hover {
+  color: #fff;
+}
+
 /* =====================
    RESPONSIVE
 ===================== */
+@media (max-width: 1199px) {
+  .service-cards-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 767px) {
+  .service-cards-inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .service-card-body { font-size: 1rem; }
   .site-title { font-size: 36px; }
+  .site-subtitle { font-size: 22px; }
   .header-inner { flex-direction: column; gap: 15px; }
-  .navbar ul { flex-wrap: wrap; gap: 10px; }
+  .navbar ul { flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .navbar ul li a { font-size: 13px; padding: 10px 0; }
   .main-content { padding: 0 15px; }
-  .top-bar { flex-direction: column; gap: 10px; }
+  .top-bar {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px 12px;
+    line-height: 1.35;
+  }
+  .top-bar-actions { margin-left: 0; flex-wrap: wrap; justify-content: center; }
+  .btn-home,
+  .btn-subscribe { font-size: 12px; letter-spacing: 1px; padding: 6px 12px; }
+  .btn-signin { font-size: 12px; }
   .logo { position: static; width: 50px; height: 50px; }
+  .site-footer { font-size: 18px; }
 }

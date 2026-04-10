@@ -1,3 +1,10 @@
 remote_theme: pages-themes/cayman@v0.2.0
 title: MCB Advisor
-description: Financial Advisory & Strategic Intelligence
+# Shown in header & default meta description
+subtitle: "Advising in Corporate Finance issues to your company. Valuations, Investment Projects and Financial analysis. Restructuring and Due Diligence"
+description: "Advising in Corporate Finance issues to your company. Valuations, Investment Projects and Financial analysis. Restructuring and Due Diligence"
+url: "https://maritothecrow.github.io"
+# Primary email (displayed on the site)
+email_primary: "mcbadvisor@gmail.com"
+# Reserved for future use — not shown in the UI yet
+email_contact_future: "Contact@mcbadvisor.com"

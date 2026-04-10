@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Panel de Administración
+title: Administration Panel
 ---
 
-# Panel de Administración
-*Acceso restringido.*
-
----
-
-## Gestión de Bases de Datos
-- SQL Databases
-- Archivos y Carpetas
+# Administration panel
+*Restricted access.*
 
 ---
 
-[⬅️ Volver al Inicio](index)
+## Database management
+- SQL databases
+- Files and folders
+
+---
+
+[⬅️ Back to Home](index)
