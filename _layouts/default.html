@@ -40,8 +40,8 @@
 </header>
 
 <nav class="navbar" aria-label="Primary">
-  <button class="navbar-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('is-open')">☰</button>
-  <ul>
+  <button class="navbar-toggle" aria-label="Toggle menu">☰</button>
+  <ul class="navbar-menu">
     {% for item in site.data.nav %}
     {% assign nav_parts = item.path | split: '#' %}
     <li>
@@ -50,6 +50,14 @@
     {% endfor %}
   </ul>
 </nav>
+
+<script>
+  const toggle = document.querySelector('.navbar-toggle');
+  const menu = document.querySelector('.navbar-menu');
+  toggle.addEventListener('click', function() {
+    menu.classList.toggle('is-open');
+  });
+</script>
 
 <main class="main-content{% if page.home %} main-content--home{% endif %}">
   {{ content }}
