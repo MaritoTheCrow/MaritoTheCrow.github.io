@@ -40,6 +40,7 @@
 </header>
 
 <nav class="navbar" aria-label="Primary">
+  <button class="navbar-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('is-open')">☰</button>
   <ul>
     {% for item in site.data.nav %}
     {% assign nav_parts = item.path | split: '#' %}

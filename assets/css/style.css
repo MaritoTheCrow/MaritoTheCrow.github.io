@@ -560,3 +560,61 @@ body {
 =======
 }
 >>>>>>> 4307423508bae57f78219c68e7ff374a504a7ab7
+/* =====================
+   NAVBAR FIX — una sola línea
+===================== */
+.navbar ul {
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+}
+
+.navbar ul li a {
+  font-size: 11px !important;
+}
+
+/* =====================
+   HAMBURGUESA MENU
+===================== */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: rgb(80, 4, 4);
+  font-size: 28px;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .navbar-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar ul {
+    display: none !important;
+    flex-direction: column !important;
+    width: 100%;
+    gap: 0 !important;
+    background-color: #ecdad5;
+    padding: 10px 0;
+  }
+
+  .navbar ul.is-open {
+    display: flex !important;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(80,4,4,0.1);
+  }
+
+  .navbar ul li a {
+    font-size: 14px !important;
+    padding: 14px 0 !important;
+    display: block;
+    width: 100%;
+  }
+}
