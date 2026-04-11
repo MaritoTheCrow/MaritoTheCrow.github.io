@@ -16,6 +16,9 @@
   <meta property="og:image" content="{{ '/Logo.png' | absolute_url }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#1a1b1f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
@@ -40,8 +43,8 @@
 </header>
 
 <nav class="navbar" aria-label="Primary">
-  <button class="navbar-toggle" aria-label="Toggle menu">☰</button>
-  <ul class="navbar-menu">
+  <button class="navbar-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+  <ul class="navbar-menu" id="nav-menu">
     {% for item in site.data.nav %}
     {% assign nav_parts = item.path | split: '#' %}
     <li>
@@ -52,8 +55,14 @@
 </nav>
 
 <script>
-  document.querySelector('.navbar-toggle').addEventListener('click', function() {
-    document.querySelector('.navbar-menu').classList.toggle('is-open');
+  window.addEventListener('DOMContentLoaded', function() {
+    var toggle = document.getElementById('nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', function() {
+        menu.classList.toggle('is-open');
+      });
+    }
   });
 </script>
 

@@ -1,14 +1,15 @@
 /* =====================
    RESET & BASE
+   Fonts: Playfair Display (titles) + Source Serif 4 (body) — FT/WSJ style
 ===================== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 20px;
-  line-height: 1.5;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.6;
   background-color: #ecdad5;
   color: #333;
 }
@@ -21,7 +22,7 @@ body {
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 13px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   display: flex;
@@ -29,6 +30,7 @@ body {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
+  font-family: Arial, sans-serif;
 }
 
 .top-bar-actions {
@@ -43,36 +45,39 @@ body {
   color: white;
   text-decoration: none;
   padding: 6px 12px;
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 4px;
+  font-family: Arial, sans-serif;
 }
 
 .btn-subscribe {
-  background-color: rgb(26, 27, 31);
+  background-color: transparent;
   border: 1px solid rgba(255,255,255,0.85);
   color: white;
   padding: 6px 12px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  font-family: Arial, sans-serif;
 }
 
 .btn-signin {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
 }
 
 /* =====================
-   HEADER
+   HEADER — 20% taller
 ===================== */
 .site-header {
   background-color: #ecdad5;
   border-bottom: 1px solid rgba(80,4,4,0.12);
-  padding: 32px 40px 28px;
+  padding: 48px 40px 40px;
   text-align: center;
 }
 
@@ -101,13 +106,13 @@ body {
 .site-title {
   font-size: 102px;
   font-weight: 700;
-  font-family: Arial, sans-serif;
+  font-family: 'Playfair Display', Georgia, serif;
   color: #500404;
   line-height: 1;
 }
 
 .site-subtitle {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   color: rgb(192, 25, 28);
   font-size: 20px;
   line-height: 1.45;
@@ -127,6 +132,7 @@ body {
   border-top: 1px solid rgb(210, 180, 170);
   border-bottom: 2px solid rgb(192, 25, 28);
   padding: 0 40px;
+  min-height: 44px;
 }
 
 .navbar-toggle {
@@ -138,8 +144,12 @@ body {
   color: rgb(80,4,4);
   font-size: 22px;
   line-height: 1;
-  margin: 8px 0;
+  margin: 6px 16px;
   border-radius: 4px;
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  z-index: 200;
 }
 
 .navbar-menu {
@@ -159,11 +169,11 @@ body {
   padding: 12px 4px;
   text-decoration: none;
   color: rgb(80,4,4);
-  font-size: 11.5px;
+  font-size: 12px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   font-family: Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -192,11 +202,11 @@ body {
 .main-content h2,
 .main-content h3 {
   color: #500404;
-  font-family: Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 .main-content h2 {
-  font-size: 36px;
+  font-size: 34px;
   margin: 24px 0 12px;
   border-bottom: 1px solid rgb(236,218,213);
   padding-bottom: 8px;
@@ -204,15 +214,14 @@ body {
 }
 
 .main-content h3 {
-  font-size: 29px;
+  font-size: 26px;
   text-align: center;
   margin: 16px 0 10px;
 }
 
 .main-content p {
-  font-size: 20px;
-  text-align: center;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .main-content a { color: #c10707; }
@@ -220,16 +229,14 @@ body {
 
 .main-content ul {
   padding-left: 20px;
-  line-height: 1.6;
-  font-size: 20px;
+  line-height: 1.7;
+  font-size: 18px;
 }
 
 /* =====================
    HOME SECTIONS
 ===================== */
-.home-section {
-  margin-bottom: 0;
-}
+.home-section { margin-bottom: 0; }
 
 .home-section__shell {
   max-width: 1200px;
@@ -248,13 +255,14 @@ body {
 }
 
 .home-services__heading {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 42px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 38px;
   font-weight: 700;
   color: #500404;
   text-align: center;
   margin: 0 0 28px;
   line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .service-grid--4 {
@@ -271,11 +279,12 @@ body {
   flex: 0 0 calc((100% - 3%) / 4);
   max-width: calc((100% - 3%) / 4);
   min-width: 0;
-  background-color: #f9ecec;
-  padding: 15px;
+  background-color: #fff;
+  padding: 0 0 15px 0;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
 }
 
 .service-card__media {
@@ -288,7 +297,6 @@ body {
   width: 100%;
   height: 180px;
   overflow: hidden;
-  border-radius: 4px 4px 0 0;
   background: #e8d8d4;
 }
 
@@ -298,14 +306,13 @@ body {
   height: 180px;
   object-fit: cover;
   object-position: center;
-  border-radius: 4px 4px 0 0;
 }
 
 .service-card__content {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  padding-top: 0;
+  padding: 0 14px;
 }
 
 .service-card__title-link {
@@ -314,8 +321,8 @@ body {
 }
 
 .service-card__title {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
   font-weight: 700;
   color: #c10707;
   line-height: 1.3;
@@ -328,7 +335,7 @@ body {
 }
 
 .service-card__desc {
-  font-family: Arial, sans-serif;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 13px;
   color: #444;
   line-height: 1.5;
@@ -339,12 +346,14 @@ body {
 
 .service-card__cta {
   font-family: Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   color: #c10707;
   margin-top: 10px;
   text-decoration: none;
   align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .service-card__cta:hover {
@@ -358,19 +367,21 @@ body {
 }
 
 .home-block__title {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 36px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 38px;
   font-weight: 700;
   color: #500404;
   margin: 0 0 12px;
   text-align: left;
-  line-height: 1.25;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .home-block__text {
-  font-size: 20px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 18px;
   color: #333;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0 0 16px;
   text-align: left;
 }
@@ -380,16 +391,17 @@ body {
 .home-cta-button {
   display: inline-block;
   font-family: Arial, sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 22px;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 26px;
   background-color: #c10707;
   color: #fff !important;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 4px;
   border: none;
   cursor: pointer;
-  margin-top: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .home-cta-button:hover {
@@ -399,7 +411,7 @@ body {
 
 .home-cta-button--submit { margin-top: 12px; }
 
-/* ----- Profile + Contact Grid ----- */
+/* ----- Profile + Contact ----- */
 .home-section--profile-contact {
   background-color: #f9ecec;
 }
@@ -407,65 +419,78 @@ body {
 .pc-grid {
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 30px;
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 40px;
-  box-sizing: border-box;
+  padding: 60px 20px;
 }
 
-.pc-grid__left {
-  flex: 0 0 260px;
-  min-width: 0;
-  text-align: left;
-}
-
-.pc-grid__right {
-  flex: 1 1 auto;
-  min-width: 0;
-  max-width: 500px;
+.pc-grid__photo-col {
+  flex: 0 0 210px;
 }
 
 .pc-grid__photo {
-  width: 220px;
+  width: 210px;
   height: auto;
-  object-fit: contain;
-  border-radius: 8px;
+  border-radius: 6px;
   display: block;
-  margin-bottom: 16px;
+}
+
+.pc-grid__text-col {
+  flex: 0 0 240px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  border-left: 1px solid rgba(80,4,4,0.15);
+  border-right: 1px solid rgba(80,4,4,0.15);
+  padding: 0 24px;
+}
+
+.pc-grid__contact-col {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 580px;
 }
 
 .pc-grid__name {
-  font-family: Arial, sans-serif;
-  font-size: 24px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
   font-weight: 700;
   color: #500404;
-  margin: 0 0 4px;
-  text-align: left;
+  margin: 0 0 6px;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .pc-grid__role {
   font-family: Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   color: #c10707;
-  margin: 0 0 12px;
-  text-align: left;
+  margin: 0 0 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .pc-grid__desc {
-  font-size: 15px;
-  color: #333;
-  line-height: 1.5;
-  margin: 0 0 12px;
-  text-align: left;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  margin: 0 0 14px;
+  text-align: center;
 }
 
 .pc-grid__links {
   font-family: Arial, sans-serif;
-  font-size: 15px;
-  text-align: left;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .pc-grid__links a {
@@ -476,16 +501,18 @@ body {
 .pc-grid__links a:hover { text-decoration: underline; }
 
 .pc-grid__contact-title {
-  font-family: Georgia, serif;
-  font-size: 28px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 34px;
   font-weight: 700;
   color: #500404;
   margin: 0 0 10px;
+  letter-spacing: -0.5px;
 }
 
 .pc-grid__contact-desc {
-  font-size: 15px;
-  color: #333;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 16px;
+  color: #444;
   margin: 0 0 16px;
   line-height: 1.5;
 }
@@ -501,17 +528,19 @@ body {
 
 .contact-form__label {
   font-family: Arial, sans-serif;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 13px;
   color: #500404;
   margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .contact-form__input,
 .contact-form__textarea {
-  font-family: Arial, sans-serif;
-  font-size: 15px;
-  padding: 10px 12px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 16px;
+  padding: 10px 14px;
   border: 1px solid rgba(80,4,4,0.2);
   border-radius: 4px;
   width: 100%;
@@ -519,9 +548,15 @@ body {
   color: #333;
 }
 
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  outline: none;
+  border-color: #c10707;
+}
+
 .contact-form__textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 130px;
 }
 
 /* =====================
@@ -532,10 +567,10 @@ body {
   color: rgb(200,200,200);
   text-align: center;
   padding: 28px 20px;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.6;
-  margin-top: 0;
   border-top: 1px solid rgba(255,255,255,0.08);
+  font-family: Arial, sans-serif;
 }
 
 .site-footer a { color: rgb(220,200,200); }
@@ -556,22 +591,26 @@ body {
 }
 
 @media (max-width: 900px) {
-  .navbar-toggle { display: block; }
+  .navbar { padding: 0; }
+  .navbar-toggle { display: block !important; }
   .navbar-menu {
-    display: none;
-    flex-direction: column;
+    display: none !important;
+    flex-direction: column !important;
     width: 100%;
     gap: 0;
-    padding: 10px 0;
+    padding: 50px 0 10px;
+    background-color: #ecdad5;
   }
-  .navbar-menu.is-open { display: flex; }
+  .navbar-menu.is-open {
+    display: flex !important;
+  }
   .navbar-menu li {
     width: 100%;
     text-align: center;
     border-bottom: 1px solid rgba(80,4,4,0.1);
   }
   .navbar-menu li a {
-    font-size: 15px;
+    font-size: 14px;
     padding: 14px 0;
   }
 }
@@ -579,13 +618,12 @@ body {
 @media (max-width: 767px) {
   .site-title { font-size: 52px; }
   .site-subtitle { font-size: 16px; }
-  .header-inner { flex-direction: column; gap: 12px; }
   .logo { position: static; width: 44px; height: 44px; }
   .main-content { padding: 40px 20px; }
   .top-bar {
     flex-direction: column;
     gap: 8px;
-    font-size: 13px;
+    font-size: 11px;
     padding: 10px 12px;
   }
   .top-bar-actions {
@@ -593,126 +631,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .btn-home,
-  .btn-subscribe { font-size: 13px; padding: 5px 10px; }
-  .btn-signin { font-size: 13px; }
-  .site-footer { font-size: 15px; }
+  .site-footer { font-size: 13px; }
   .home-section__shell { padding: 40px 20px; }
   .service-card--equal {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .pc-grid {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 40px;
-  }
-  .pc-grid__left,
-  .pc-grid__right {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 100%;
-  }
-  .pc-grid__photo { margin: 0 auto 16px; }
-  .pc-grid__name,
-  .pc-grid__role,
-  .pc-grid__desc,
-  .pc-grid__links { text-align: center; }
-}
-/* 3 column profile layout */
-.pc-grid {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 40px;
-}
-
-.pc-grid__photo-col {
-  flex: 0 0 220px;
-}
-
-.pc-grid__photo {
-  width: 220px;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-}
-
-.pc-grid__text-col {
-  flex: 0 0 240px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 300px;
-}
-
-.pc-grid__contact-col {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.pc-grid__name {
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #500404;
-  margin: 0 0 6px;
-  text-align: center;
-}
-
-.pc-grid__role {
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #c10707;
-  margin: 0 0 14px;
-  text-align: center;
-}
-
-.pc-grid__desc {
-  font-size: 14px;
-  color: #333;
-  line-height: 1.5;
-  margin: 0 0 14px;
-  text-align: center;
-}
-
-.pc-grid__links {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  text-align: center;
-}
-
-.pc-grid__links a {
-  color: #c10707;
-  text-decoration: none;
-}
-
-.pc-grid__links a:hover { text-decoration: underline; }
-
-.pc-grid__contact-title {
-  font-family: Georgia, serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: #500404;
-  margin: 0 0 10px;
-}
-
-.pc-grid__contact-desc {
-  font-size: 15px;
-  color: #333;
-  margin: 0 0 16px;
-  line-height: 1.5;
-}
-
-.pc-grid__contact-desc a { color: #c10707; }
-
-@media (max-width: 900px) {
   .pc-grid {
     flex-direction: column;
     padding: 40px 20px;
@@ -725,6 +649,12 @@ body {
     width: 100%;
     max-width: 100%;
     min-height: auto;
+    border: none;
+    padding: 0;
   }
   .pc-grid__photo { margin: 0 auto; }
+  .pc-grid__name,
+  .pc-grid__role,
+  .pc-grid__desc,
+  .pc-grid__links { text-align: center; }
 }
