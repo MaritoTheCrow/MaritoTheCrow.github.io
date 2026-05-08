@@ -1,12 +1,17 @@
-{% comment %} Homepage {% endcomment %}
+{% if page.lang == 'es' %}
+  {% assign t = site.data.es %}
+  {% assign services_data = site.data.home_services_es %}
+{% else %}
+  {% assign t = site.data.en %}
+  {% assign services_data = site.data.home_services %}
+{% endif %}
 {% assign profile_url = site.profile_image | relative_url | replace: ' ', '%20' %}
 
-{% comment %} SECTION 1: SERVICES {% endcomment %}
 <section class="home-section home-section--services" id="services" aria-labelledby="services-heading">
   <div class="home-section__shell">
-    <h2 class="home-services__heading" id="services-heading">Services</h2>
+    <h2 class="home-services__heading" id="services-heading">{{ t.services_heading }}</h2>
     <div class="service-grid service-grid--4">
-      {% for s in site.data.home_services %}
+      {% for s in services_data %}
       {% assign card_img = s.image | relative_url | replace: ' ', '%20' %}
       <article class="service-card service-card--equal">
         <a class="service-card__media" href="{{ s.path | relative_url }}">
@@ -19,7 +24,7 @@
             <h3 class="service-card__title">{{ s.title }}</h3>
           </a>
           <p class="service-card__desc">{{ s.description }}</p>
-          <a class="service-card__cta" href="{{ s.path | relative_url }}">How we can help you <span aria-hidden="true">→</span></a>
+          <a class="service-card__cta" href="{{ s.path | relative_url }}">{{ t.service_cta }} <span aria-hidden="true">→</span></a>
         </div>
       </article>
       {% endfor %}
@@ -27,53 +32,53 @@
   </div>
 </section>
 
-{% comment %} SECTION 2: VALUATIONS CTA {% endcomment %}
 <section class="home-section home-section--valuations-cta" id="valuations-spotlight" aria-labelledby="valuations-cta-heading">
   <div class="home-section__shell home-section__shell--narrow">
-    <h2 class="home-block__title" id="valuations-cta-heading">Valuations &amp; Financial Analysis</h2>
-    <p class="home-block__text">Rigorous models, transparent assumptions, and clear narratives for boards, investors, and counterparties.</p>
-    <a class="home-cta-button" href="{{ '/valuations' | relative_url }}">Explore valuations</a>
+    <h2 class="home-block__title" id="valuations-cta-heading">{{ t.cta_valuations_title }}</h2>
+    <p class="home-block__text">{{ t.cta_valuations_text }}</p>
+    {% if page.lang == 'es' %}
+      <a class="home-cta-button" href="{{ '/es/valuations' | relative_url }}">{{ t.cta_valuations_btn }}</a>
+    {% else %}
+      <a class="home-cta-button" href="{{ '/valuations' | relative_url }}">{{ t.cta_valuations_btn }}</a>
+    {% endif %}
   </div>
 </section>
 
-{% comment %} SECTION 3: PROFILE + CONTACT {% endcomment %}
 <section class="home-section home-section--profile-contact" id="home-about">
   <div class="pc-grid">
 
-    <!-- LEFT: PHOTO -->
     <div class="pc-grid__photo-col">
-      <img class="pc-grid__photo"
-           src="{{ profile_url }}"
-           alt="Mario Cesar Bogado"
-           decoding="async">
+      <img class="pc-grid__photo" src="{{ profile_url }}" alt="Mario Cesar Bogado" decoding="async">
     </div>
 
-    <!-- CENTER: PROFILE TEXT -->
     <div class="pc-grid__text-col">
       <h2 class="pc-grid__name">Mario Cesar Bogado</h2>
-      <p class="pc-grid__role">Financial Analyst</p>
-      <p class="pc-grid__desc">Providing support in Valuations, M&amp;A operations, Investment Projects and Corporate Finance decisions.</p>
+      <p class="pc-grid__role">{{ t.profile_role }}</p>
+      <p class="pc-grid__desc">{{ t.profile_desc }}</p>
       <p class="pc-grid__links">
-        <a href="https://www.linkedin.com/in/mario-bogado-702a9a17/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
+        <a href="https://www.linkedin.com/in/mario-bogado-702a9a17/" target="_blank" rel="noopener noreferrer">{{ t.profile_linkedin }}</a>
         <span> · </span>
-        <a href="{{ '/about' | relative_url }}">About Us</a>
+        {% if page.lang == 'es' %}
+          <a href="{{ '/es/about' | relative_url }}">{{ t.profile_about }}</a>
+        {% else %}
+          <a href="{{ '/about' | relative_url }}">{{ t.profile_about }}</a>
+        {% endif %}
       </p>
     </div>
 
-    <!-- RIGHT: CONTACT FORM -->
     <div class="pc-grid__contact-col" id="get-in-touch">
-      <h2 class="pc-grid__contact-title">Contact</h2>
-      <p class="pc-grid__contact-desc">Send a message and we will get back to you. For full details, see <a href="{{ '/about' | relative_url }}#contact">contact information</a>.</p>
+      <h2 class="pc-grid__contact-title">{{ t.contact_title }}</h2>
+      <p class="pc-grid__contact-desc">{{ t.contact_desc }} <a href="{% if page.lang == 'es' %}{{ '/es/about' | relative_url }}{% else %}{{ '/about' | relative_url }}{% endif %}#contact">{{ t.contact_desc_link }}</a>.</p>
       <form class="contact-form" action="https://formsubmit.co/{{ site.contact_form_email }}" method="POST" novalidate>
         <input type="hidden" name="_subject" value="MCB Advisor — Website inquiry">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <label class="contact-form__label" for="contact-name">Name</label>
-        <input class="contact-form__input" id="contact-name" name="name" type="text" required placeholder="Your name">
-        <label class="contact-form__label" for="contact-email">Email</label>
+        <label class="contact-form__label" for="contact-name">{{ t.contact_label_name }}</label>
+        <input class="contact-form__input" id="contact-name" name="name" type="text" required placeholder="{{ t.contact_placeholder_name }}">
+        <label class="contact-form__label" for="contact-email">{{ t.contact_label_email }}</label>
         <input class="contact-form__input" id="contact-email" name="email" type="email" required placeholder="you@example.com">
-        <label class="contact-form__label" for="contact-message">Message</label>
-        <textarea class="contact-form__textarea" id="contact-message" name="message" rows="5" required placeholder="How can we help?"></textarea>
-        <button class="home-cta-button home-cta-button--submit" type="submit">Send message</button>
+        <label class="contact-form__label" for="contact-message">{{ t.contact_label_message }}</label>
+        <textarea class="contact-form__textarea" id="contact-message" name="message" rows="5" required placeholder="{{ t.contact_placeholder_message }}"></textarea>
+        <button class="home-cta-button home-cta-button--submit" type="submit">{{ t.contact_btn }}</button>
       </form>
     </div>
 

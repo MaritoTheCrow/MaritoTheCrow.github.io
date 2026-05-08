@@ -1,0 +1,16 @@
+- title: Valuaciones
+  image: "/1.jpg"
+  path: /es/valuations
+  description: "Flujo de caja descontado, comparables de mercado y análisis de escenarios adaptados a tus necesidades."
+- title: Due Diligence
+  image: "/2.png"
+  path: /es/ma
+  description: "Análisis financiero y operativo previo a transacciones para identificar riesgos, pasivos y generadores de valor."
+- title: Finanzas Operativas
+  image: "/Operational Finance.jpg"
+  path: /es/operative
+  description: "Flujo de caja, capital de trabajo y dashboards de KPIs alineados con la estrategia del día a día."
+- title: Proyectos de Inversión
+  image: "/4.jpg"
+  path: /es/corporate
+  description: "Casos de negocio, asignación de capital y priorización para objetivos de crecimiento y rentabilidad."
