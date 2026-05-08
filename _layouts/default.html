@@ -28,13 +28,18 @@
 </head>
 <body>
 
-<div class="top-bar">
-  {{ t.top_bar }}
-  <div class="top-bar-actions">
+<div class="top-bar-actions">
     <a href="{{ '/' | relative_url }}" class="btn-home">{{ t.btn_home }}</a>
     <a href="{{ '/subscribe' | relative_url }}" class="btn-subscribe">{{ t.btn_subscribe }}</a>
     <a href="{{ '/admin' | relative_url }}" class="btn-signin">{{ t.btn_signin }}</a>
-  </div>
+    {% if page.lang == 'es' %}
+      {% assign current_path = page.url | remove: '/es' %}
+      {% if current_path == '' %}{% assign current_path = '/' %}{% endif %}
+      <span class="btn-lang"><a href="{{ current_path }}">EN</a> | ES</span>
+    {% else %}
+      {% assign es_path = '/es' | append: page.url %}
+      <span class="btn-lang">EN | <a href="{{ es_path }}">ES</a></span>
+    {% endif %}
 </div>
 
 <header class="site-header">
@@ -43,24 +48,7 @@
       <img src="{{ '/Logo.png' | relative_url }}" alt="MCB Advisor Logo" class="logo">
       <h1 class="site-title">MCB Advisor</h1>
     </div>
-    <div class="header-right">
-      <p class="site-subtitle">{{ t.site_subtitle }}</p>
-      <div class="lang-switcher" aria-label="Language selector">
-        {% if page.lang == 'es' %}
-          {% assign current_path = page.url | remove: '/es' %}
-          {% if current_path == '' %}{% assign current_path = '/' %}{% endif %}
-          <a href="{{ current_path }}" class="lang-option" data-lang="en">EN</a>
-          <span class="lang-divider">|</span>
-          <span class="lang-option lang-option--active">ES</span>
-        {% else %}
-          <span class="lang-option lang-option--active">EN</span>
-          <span class="lang-divider">|</span>
-          {% assign es_path = '/es' | append: page.url %}
-          <a href="{{ es_path }}" class="lang-option" data-lang="es">ES</a>
-        {% endif %}
-      </div>
-    </div>
-  </div>
+    <p class="site-subtitle">{{ t.site_subtitle }}</p>
 </header>
 
 <nav class="navbar" aria-label="Primary">

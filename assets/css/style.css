@@ -705,3 +705,23 @@ body {
   color: rgba(255,255,255,0.3);
   font-weight: 300;
 }
+/* ── Lang switcher in top-bar ── */
+.btn-lang {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.btn-lang a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.btn-lang a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
