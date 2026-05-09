@@ -35,10 +35,14 @@
     {% if page.lang == 'es' %}
       {% assign current_path = page.url | remove: '/es' %}
       {% if current_path == '' %}{% assign current_path = '/' %}{% endif %}
-      <span class="btn-lang"><a href="{{ current_path }}">EN</a> | ES</span>
+      <a href="{{ current_path }}" class="btn-lang-option">EN</a>
+      <span class="btn-lang-sep">|</span>
+      <span class="btn-lang-option btn-lang-active">ES</span>
     {% else %}
       {% assign es_path = '/es' | append: page.url %}
-      <span class="btn-lang">EN | <a href="{{ es_path }}">ES</a></span>
+      <span class="btn-lang-option btn-lang-active">EN</span>
+      <span class="btn-lang-sep">|</span>
+      <a href="{{ es_path }}" class="btn-lang-option">ES</a>
     {% endif %}
 </div>
 
