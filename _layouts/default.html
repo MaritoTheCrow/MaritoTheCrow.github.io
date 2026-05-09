@@ -29,8 +29,8 @@
 <body>
 
 <div class="top-bar">
-    CORPORATE FINANCE &nbsp;|&nbsp; VALUATIONS &nbsp;|&nbsp; CAPITAL MARKETS
-    <div class="top-bar-actions">
+  CORPORATE FINANCE &nbsp;|&nbsp; VALUATIONS &nbsp;|&nbsp; CAPITAL MARKETS
+  <div class="top-bar-actions">
     <a href="{{ '/' | relative_url }}" class="btn-home">{{ t.btn_home }}</a>
     <a href="{{ '/subscribe' | relative_url }}" class="btn-subscribe">{{ t.btn_subscribe }}</a>
     <a href="{{ '/admin' | relative_url }}" class="btn-signin">{{ t.btn_signin }}</a>
@@ -45,8 +45,9 @@
       <span class="btn-lang-option btn-lang-active">EN</span>
       <span class="btn-lang-sep">|</span>
       <a href="{{ es_path }}" class="btn-lang-option">ES</a>
-      <p class="site-subtitle">{{ t.site_subtitle }}</p>
-</header>
+    {% endif %}
+  </div>
+</div>
 
 <header class="site-header">
   <div class="header-inner">
