@@ -77,7 +77,7 @@ body {
 .site-header {
   background-color: #ecdad5;
   border-bottom: 1px solid rgba(80,4,4,0.12);
-  padding: 48px 40px 40px;
+  padding: 24px 40px 20px;
   text-align: center;
 }
 
@@ -272,15 +272,16 @@ body {
 .home-section__shell {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 40px;
+  padding: 24px 40px;
   box-sizing: border-box;
 }
 
 /* LEFT ALIGNED — Valuations section */
 .home-section__shell--narrow {
   max-width: 720px;
-  margin: 0;
-  padding-left: 40px;
+  margin: 0 auto;
+  padding: 24px 40px;
+  text-align: center;
 }
 
 /* ----- Services ----- */
@@ -290,7 +291,7 @@ body {
 
 .home-services__heading {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 38px;
+  font-size: 68px;
   font-weight: 700;
   color: #500404;
   text-align: center;
@@ -406,7 +407,7 @@ body {
   font-weight: 700;
   color: #500404;
   margin: 0 0 12px;
-  text-align: left;
+  text-align: center;
   line-height: 1.2;
   letter-spacing: -0.5px;
 }
