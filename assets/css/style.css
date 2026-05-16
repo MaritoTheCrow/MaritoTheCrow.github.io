@@ -237,7 +237,7 @@ body {
 }
 
 .main-content h2 {
-  font-size: 34px;
+  font-size: 68px;
   margin: 24px 0 12px;
   border-bottom: 1px solid rgb(236,218,213);
   padding-bottom: 8px;
@@ -291,7 +291,7 @@ body {
 
 .home-services__heading {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 98px;
+  font-size: 68px !important;
   font-weight: 700;
   color: #500404;
   text-align: center;
