@@ -69,15 +69,26 @@
     {% endif %}
     {% for item in nav_data %}
       {% assign nav_parts = item.path | split: '#' %}
-      <li>
-        <a href="{{ nav_parts[0] | relative_url }}{% if nav_parts.size > 1 %}#{{ nav_parts[1] }}{% endif %}">{{ item.title }}</a>
-      </li>
+      {% if item.dropdown %}
+        <li class="nav-item--dropdown">
+          <a href="{{ nav_parts[0] | relative_url }}{% if nav_parts.size > 1 %}#{{ nav_parts[1] }}{% endif %}" class="nav-link--has-dropdown">{{ item.title }} <span class="nav-arrow">▾</span></a>
+          <ul class="nav-dropdown">
+            {% for sub in item.dropdown %}
+              {% assign sub_parts = sub.path | split: '#' %}
+              <li><a href="{{ sub_parts[0] | relative_url }}{% if sub_parts.size > 1 %}#{{ sub_parts[1] }}{% endif %}">{{ sub.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% else %}
+        <li><a href="{{ nav_parts[0] | relative_url }}{% if nav_parts.size > 1 %}#{{ nav_parts[1] }}{% endif %}">{{ item.title }}</a></li>
+      {% endif %}
     {% endfor %}
   </ul>
 </nav>
 
 <script>
   window.addEventListener('DOMContentLoaded', function() {
+    // Hamburger
     var toggle = document.getElementById('nav-toggle');
     var menu = document.getElementById('nav-menu');
     if (toggle && menu) {
@@ -85,6 +96,15 @@
         menu.classList.toggle('is-open');
       });
     }
+
+    // Dropdowns — cerrar al hacer click afuera
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-item--dropdown')) {
+        document.querySelectorAll('.nav-item--dropdown').forEach(function(el) {
+          el.classList.remove('is-open');
+        });
+      }
+    });
   });
 </script>
 
