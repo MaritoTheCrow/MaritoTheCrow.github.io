@@ -1,14 +1,48 @@
 - title: M&A
   path: /es/ma
+  dropdown:
+    - title: Fusiones y Adquisiciones
+      path: /es/ma
+    - title: Due Diligence
+      path: /es/ma#due-diligence
+    - title: Estructuración de Deals
+      path: /es/ma#deal-structuring
+
 - title: Valuaciones y Mercados
   path: /es/valuations
+  dropdown:
+    - title: Flujo de Caja Descontado
+      path: /es/valuations#dcf
+    - title: Comparables de Mercado
+      path: /es/valuations#comparables
+    - title: Análisis de Escenarios
+      path: /es/valuations#scenarios
+
 - title: Finanzas Corporativas
   path: /es/corporate
+  dropdown:
+    - title: Proyectos de Inversión
+      path: /es/corporate#investment
+    - title: Asignación de Capital
+      path: /es/corporate#capital
+    - title: Casos de Negocio
+      path: /es/corporate#cases
+
 - title: Finanzas Operativas
   path: /es/operative
+  dropdown:
+    - title: Gestión de Flujo de Caja
+      path: /es/operative#cashflow
+    - title: Capital de Trabajo
+      path: /es/operative#working-capital
+    - title: Dashboards de KPIs
+      path: /es/operative#kpi
+
 - title: Sobre Nosotros
   path: /es/about
+
 - title: Contacto
   path: "/es/about#contact"
+
 - title: Informes y Descargas
   path: /es/documents

@@ -1,14 +1,48 @@
 - title: M&A
   path: /ma
+  dropdown:
+    - title: Mergers & Acquisitions
+      path: /ma
+    - title: Due Diligence
+      path: /ma#due-diligence
+    - title: Deal Structuring
+      path: /ma#deal-structuring
+
 - title: Valuations & Capital Markets
   path: /valuations
+  dropdown:
+    - title: Discounted Cash Flow
+      path: /valuations#dcf
+    - title: Trading Comparables
+      path: /valuations#comparables
+    - title: Scenario Analysis
+      path: /valuations#scenarios
+
 - title: Corporate Finance
   path: /corporate
+  dropdown:
+    - title: Investment Projects
+      path: /corporate#investment
+    - title: Capital Allocation
+      path: /corporate#capital
+    - title: Business Cases
+      path: /corporate#cases
+
 - title: Operative Finance
   path: /operative
+  dropdown:
+    - title: Cash Flow Management
+      path: /operative#cashflow
+    - title: Working Capital
+      path: /operative#working-capital
+    - title: KPI Dashboards
+      path: /operative#kpi
+
 - title: About Us
   path: /about
+
 - title: Contact
   path: "/about#contact"
+
 - title: Reports & Downloads
   path: /documents
