@@ -4,6 +4,13 @@ title: Mergers & Acquisitions
 permalink: /ma/
 ---
 
+<style>
+h2 {
+  font-size: 1.8rem !important;
+  margin-top: 0.5rem !important;
+}
+</style>
+
 ## 1 - Merger & Acquisitions
 
 * Valuación de Empresas
