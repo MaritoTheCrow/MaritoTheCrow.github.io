@@ -4,119 +4,43 @@ title: Mergers & Acquisitions
 permalink: /ma/
 ---
 
-<style>
-.ma-section {
-  max-width: 1000px;
-  text-align: left;
-}
+# Mergers & Acquisitions
 
-.ma-section h2 {
-  text-align: left;
-  color: #8b0000;
-  font-weight: bold;
-  margin-top: 2rem;
-  font-size: 1.5rem;
-}
+## 1 - Merger & Acquisitions
 
-.article-item {
-  margin: 1.5rem 0;
-}
+### Artículos y Documentos
 
-.article-title {
-  color: #8b0000;
-  font-weight: bold;
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
-}
+* Valuación de Empresas
+  * 📥 [Descargar PDF](/documents/valuacion.pdf)
+  * 👁️ [Leer Artículo](/articles/valuacion/)
 
-.badge {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 3px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  margin-left: 0.5rem;
-}
+* Estructuras de Pago
+  * 📥 [Descargar PDF](/documents/estructura-pago.pdf)
 
-.badge-free {
-  background-color: #28a745;
-  color: white;
-}
+---
 
-.badge-paid {
-  background-color: #dc3545;
-  color: white;
-}
+## 2 - Due Diligence
 
-.article-links {
-  margin-top: 0.5rem;
-  padding-left: 2rem;
-}
-</style>
+### Artículos y Documentos
 
-<div class="ma-section">
+* Checklist de Due Diligence
+  * 📥 [Descargar PDF](/documents/dd-checklist.pdf)
 
-Merger & Acquisitions
+* Due Diligence Financiero
+  * 📥 [Descargar PDF](/documents/dd-financiero.pdf)
 
-<div class="article-item">
-<div class="article-title">Valuación de Empresas <span class="badge badge-free">FREE</span></div>
-<div class="article-links">
+---
 
-- 📥 [Descargar PDF](/documents/valuacion.pdf)
-- 👁️ [Leer Artículo](/articles/valuacion/)
+## 3 - Deal Structuring
 
-</div>
-</div>
+### Artículos y Documentos
 
-<div class="article-item">
-<div class="article-title">Estructuras de Pago <span class="badge badge-paid">PAGO</span></div>
-<div class="article-links">
+* Optimización Fiscal en M&A
+  * 📥 [Descargar PDF](/documents/tax-optimization.pdf)
 
-- 🔒 [Suscribirse para descargar](/suscripcion/)
+* Structuring Legal
+  * 📥 [Descargar PDF](/documents/legal-structure.pdf)
 
-</div>
-</div>
-
-Due Diligence
-
-<div class="article-item">
-<div class="article-title">Checklist de Due Diligence <span class="badge badge-free">FREE</span></div>
-<div class="article-links">
-
-- 📥 [Descargar PDF](/documents/dd-checklist.pdf)
-
-</div>
-</div>
-
-<div class="article-item">
-<div class="article-title">Due Diligence Financiero <span class="badge badge-paid">PAGO</span></div>
-<div class="article-links">
-
-- 🔒 [Suscribirse para descargar](/suscripcion/)
-
-</div>
-</div>
-
-Deal Structuring
-
-<div class="article-item">
-<div class="article-title">Optimización Fiscal en M&A <span class="badge badge-free">FREE</span></div>
-<div class="article-links">
-
-- 📥 [Descargar PDF](/documents/tax-optimization.pdf)
-
-</div>
-</div>
-
-<div class="article-item">
-<div class="article-title">Structuring Legal <span class="badge badge-paid">PAGO</span></div>
-<div class="article-links">
-
-- 🔒 [Suscribirse para descargar](/suscripcion/)
-
-</div>
-</div>
+---
 
 [← Volver al Inicio](/)
-
-</div>
