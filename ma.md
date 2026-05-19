@@ -4,11 +4,18 @@ title: Mergers & Acquisitions
 permalink: /ma/
 ---
 
-# Mergers & Acquisitions
+<style>
+.ma-title {
+  color: #8b0000;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+</style>
 
-## 1 - Merger & Acquisitions
-
-### Artículos y Documentos
+<div class="ma-title">1 - Merger & Acquisitions</div>
 
 * Valuación de Empresas
   * 📥 [Descargar PDF](/documents/valuacion.pdf)
@@ -19,9 +26,7 @@ permalink: /ma/
 
 ---
 
-## 2 - Due Diligence
-
-### Artículos y Documentos
+<div class="ma-title">2 - Due Diligence</div>
 
 * Checklist de Due Diligence
   * 📥 [Descargar PDF](/documents/dd-checklist.pdf)
@@ -31,9 +36,7 @@ permalink: /ma/
 
 ---
 
-## 3 - Deal Structuring
-
-### Artículos y Documentos
+<div class="ma-title">3 - Deal Structuring</div>
 
 * Optimización Fiscal en M&A
   * 📥 [Descargar PDF](/documents/tax-optimization.pdf)
