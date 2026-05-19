@@ -12,25 +12,28 @@ permalink: /ma/
 
 .ma-section h2 {
   text-align: left;
+  color: #8b0000;
+  font-weight: bold;
   margin-top: 2rem;
-}
-
-.ma-section h3 {
-  text-align: left;
-  color: #666;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .article-item {
-  margin: 1rem 0;
-  padding-left: 2rem;
+  margin: 1.5rem 0;
+}
+
+.article-title {
+  color: #8b0000;
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
 }
 
 .badge {
   display: inline-block;
-  padding: 0.2rem 0.6rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 3px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: bold;
   margin-left: 0.5rem;
 }
@@ -44,53 +47,75 @@ permalink: /ma/
   background-color: #dc3545;
   color: white;
 }
+
+.article-links {
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+}
 </style>
 
 <div class="ma-section">
----
 
-## 1 - Merger & Acquisitions
+Merger & Acquisitions
 
 <div class="article-item">
-**Valuación de Empresas** <span class="badge badge-free">FREE</span>
+<div class="article-title">Valuación de Empresas <span class="badge badge-free">FREE</span></div>
+<div class="article-links">
+
 - 📥 [Descargar PDF](/documents/valuacion.pdf)
 - 👁️ [Leer Artículo](/articles/valuacion/)
+
+</div>
 </div>
 
 <div class="article-item">
-**Estructuras de Pago** <span class="badge badge-paid">PAGO</span>
+<div class="article-title">Estructuras de Pago <span class="badge badge-paid">PAGO</span></div>
+<div class="article-links">
+
 - 🔒 [Suscribirse para descargar](/suscripcion/)
+
+</div>
 </div>
 
----
-
-## 2 - Due Diligence
+Due Diligence
 
 <div class="article-item">
-**Checklist de Due Diligence** <span class="badge badge-free">FREE</span>
+<div class="article-title">Checklist de Due Diligence <span class="badge badge-free">FREE</span></div>
+<div class="article-links">
+
 - 📥 [Descargar PDF](/documents/dd-checklist.pdf)
+
+</div>
 </div>
 
 <div class="article-item">
-**Due Diligence Financiero** <span class="badge badge-paid">PAGO</span>
+<div class="article-title">Due Diligence Financiero <span class="badge badge-paid">PAGO</span></div>
+<div class="article-links">
+
 - 🔒 [Suscribirse para descargar](/suscripcion/)
+
+</div>
 </div>
 
----
-
-## 3 - Deal Structuring
+Deal Structuring
 
 <div class="article-item">
-**Optimización Fiscal en M&A** <span class="badge badge-free">FREE</span>
+<div class="article-title">Optimización Fiscal en M&A <span class="badge badge-free">FREE</span></div>
+<div class="article-links">
+
 - 📥 [Descargar PDF](/documents/tax-optimization.pdf)
+
+</div>
 </div>
 
 <div class="article-item">
-**Structuring Legal** <span class="badge badge-paid">PAGO</span>
-- 🔒 [Suscribirse para descargar](/suscripcion/)
-</div>
+<div class="article-title">Structuring Legal <span class="badge badge-paid">PAGO</span></div>
+<div class="article-links">
 
----
+- 🔒 [Suscribirse para descargar](/suscripcion/)
+
+</div>
+</div>
 
 [← Volver al Inicio](/)
 
