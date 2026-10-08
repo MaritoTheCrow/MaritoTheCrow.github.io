@@ -33,20 +33,21 @@
 <div class="top-bar">
   CORPORATE FINANCE &nbsp;|&nbsp; VALUATIONS &nbsp;|&nbsp; CAPITAL MARKETS
   <div class="top-bar-actions">
-    <a href="{{ '/' | relative_url }}" class="btn-home">{{ t.btn_home }}</a>
-    <a href="{{ '/subscribe' | relative_url }}" class="btn-subscribe">{{ t.btn_subscribe }}</a>
-    <a href="{{ '/admin' | relative_url }}" class="btn-signin">{{ t.btn_signin }}</a>
+    {% if page.lang == 'es' %}{% assign lp = '/es' %}{% else %}{% assign lp = '' %}{% endif %}
+    <a href="{{ lp | append: '/' | relative_url }}" class="btn-home">{{ t.btn_home }}</a>
+    <a href="{{ lp | append: '/subscribe' | relative_url }}" class="btn-subscribe">{{ t.btn_subscribe }}</a>
+    <a href="{{ lp | append: '/admin' | relative_url }}" class="btn-signin">{{ t.btn_signin }}</a>
     {% if page.lang == 'es' %}
-      {% assign current_path = page.url | remove: '/es' %}
+      {% assign current_path = page.url | replace_first: '/es', '' %}
       {% if current_path == '' %}{% assign current_path = '/' %}{% endif %}
-      <a href="{{ current_path }}" class="btn-lang-option">EN</a>
+      <a href="{{ current_path | relative_url }}" class="btn-lang-option">EN</a>
       <span class="btn-lang-sep">|</span>
       <span class="btn-lang-option btn-lang-active">ES</span>
     {% else %}
       {% assign es_path = '/es' | append: page.url %}
       <span class="btn-lang-option btn-lang-active">EN</span>
       <span class="btn-lang-sep">|</span>
-      <a href="{{ es_path }}" class="btn-lang-option">ES</a>
+      <a href="{{ es_path | relative_url }}" class="btn-lang-option">ES</a>
     {% endif %}
   </div>
 </div>

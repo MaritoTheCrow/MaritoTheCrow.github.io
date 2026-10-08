@@ -1,9 +1,20 @@
 ---
 layout: default
-title: MCB Advisor
+title: MCB Advisor | Finanzas Operativas
 lang: es
 ---
-<div class="main-content__inner">
-  <p><em>Versión en español — contenido en construcción.</em></p>
-  <a href="/es/">← Inicio</a>
-</div>
+
+# Finanzas Operativas
+
+Gestión del flujo de caja basada en datos.
+
+---
+
+- <span id="cashflow"></span>Flujo de caja operativo
+- Proyecciones de corto plazo
+- <span id="kpi"></span>KPIs financieros
+- <span id="working-capital"></span>Gestión del capital de trabajo
+
+---
+
+[← Volver al Inicio](/es/)

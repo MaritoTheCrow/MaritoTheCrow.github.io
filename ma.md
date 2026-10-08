@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Mergers & Acquisitions
-permalink: /ma/
+title: MCB Advisor | Mergers & Acquisitions
 ---
 
 <style>
@@ -11,35 +10,34 @@ h2 {
 }
 </style>
 
-## 1 - Merger & Acquisitions
+## 1 - Mergers & Acquisitions
 
-* Valuación de Empresas
-  * 📥 [Descargar PDF](/documents/valuacion.pdf)
-  * 👁️ [Leer Artículo](/articles/valuacion/)
+* Company Valuation
+  * 📥 PDF coming soon
 
-* Estructuras de Pago
-  * 📥 [Descargar PDF](/documents/estructura-pago.pdf)
-
----
-
-## 2 - Due Diligence
-
-* Checklist de Due Diligence
-  * 📥 [Descargar PDF](/documents/dd-checklist.pdf)
-
-* Due Diligence Financiero
-  * 📥 [Descargar PDF](/documents/dd-financiero.pdf)
+* Payment Structures
+  * 📥 PDF coming soon
 
 ---
 
-## 3 - Deal Structuring
+## 2 - Due Diligence {#due-diligence}
 
-* Optimización Fiscal en M&A
-  * 📥 [Descargar PDF](/documents/tax-optimization.pdf)
+* Due Diligence Checklist
+  * 📥 PDF coming soon
 
-* Structuring Legal
-  * 📥 [Descargar PDF](/documents/legal-structure.pdf)
+* Financial Due Diligence
+  * 📥 PDF coming soon
 
 ---
 
-[← Volver al Inicio](/)
+## 3 - Deal Structuring {#deal-structuring}
+
+* Tax Optimization in M&A
+  * 📥 PDF coming soon
+
+* Legal Structuring
+  * 📥 PDF coming soon
+
+---
+
+[← Back to Home](/)

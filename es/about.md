@@ -1,9 +1,22 @@
 ---
 layout: default
-title: MCB Advisor
+title: MCB Advisor | Sobre Nosotros
 lang: es
 ---
-<div class="main-content__inner">
-  <p><em>Versión en español — contenido en construcción.</em></p>
-  <a href="/es/">← Inicio</a>
-</div>
+
+# MCB Advisor
+### Asesoramiento en finanzas corporativas para tu empresa. Valuaciones, proyectos de inversión y análisis financiero. Reestructuración y Due Diligence
+
+**MCB Advisor** es una consultora boutique con sede en Posadas, Misiones, Argentina.  
+15 años de experiencia en Finanzas Corporativas, M&A y valuaciones técnicas.
+
+---
+
+<h2 id="contact">Contacto</h2>
+
+📧 [mcbadvisor@gmail.com](mailto:mcbadvisor@gmail.com)
+
+---
+> "En Dios confiamos, el resto debe traer datos."
+
+[← Volver al Inicio](/es/)

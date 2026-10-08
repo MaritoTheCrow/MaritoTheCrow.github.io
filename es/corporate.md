@@ -1,9 +1,20 @@
 ---
 layout: default
-title: MCB Advisor
+title: MCB Advisor | Finanzas Corporativas
 lang: es
 ---
-<div class="main-content__inner">
-  <p><em>Versión en español — contenido en construcción.</em></p>
-  <a href="/es/">← Inicio</a>
-</div>
+
+# Finanzas Corporativas
+
+Estructuración de capital y optimización financiera para empresas locales.
+
+---
+
+- Optimización de deuda
+- Costo de capital (WACC)
+- Estructura de financiamiento
+- Planificación financiera
+
+---
+
+[← Volver al Inicio](/es/)

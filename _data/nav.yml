@@ -22,11 +22,11 @@
   path: /corporate
   dropdown:
     - title: Investment Projects
-      path: /corporate#investment
+      path: /corporate
     - title: Capital Allocation
-      path: /corporate#capital
+      path: /corporate
     - title: Business Cases
-      path: /corporate#cases
+      path: /corporate
 
 - title: Operative Finance
   path: /operative

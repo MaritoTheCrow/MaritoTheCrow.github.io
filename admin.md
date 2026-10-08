@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Administration Panel
+title: MCB Advisor | Administration Panel
 ---
 
 # Administration panel

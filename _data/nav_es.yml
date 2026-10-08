@@ -22,11 +22,11 @@
   path: /es/corporate
   dropdown:
     - title: Proyectos de Inversión
-      path: /es/corporate#investment
+      path: /es/corporate
     - title: Asignación de Capital
-      path: /es/corporate#capital
+      path: /es/corporate
     - title: Casos de Negocio
-      path: /es/corporate#cases
+      path: /es/corporate
 
 - title: Finanzas Operativas
   path: /es/operative

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Valuations & Capital Markets
+title: MCB Advisor | Valuations
 ---
 
 # Valuations & Capital Markets
@@ -9,10 +9,10 @@ Technical asset valuation and analysis of the local capital markets.
 
 ---
 
-- DCF and cash flow models
+- <span id="dcf"></span>DCF and cash flow models
 - Merval analysis (Agrometal, Aluar, etc.)
-- Market comparables
-- Variable sensitivity
+- <span id="comparables"></span>Market comparables
+- <span id="scenarios"></span>Variable sensitivity
 
 ---
 

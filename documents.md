@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Documents & Reports
+title: MCB Advisor | Documents & Reports
 ---
 
 # Consulting archive
-*Technical reports and valuation models available for public download.*
+*Technical reports and valuation models. PDF downloads will be published here as they become available.*
 
 ---
 
 ### Capital markets (Merval)
-* **Agrometal analysis 2025**: [Download PDF](assets/pdf/agro_2025.pdf)
-* **Aluar valuation**: [Download PDF](assets/pdf/aluar_valuation.pdf)
+* **Agrometal analysis 2025**: PDF coming soon
+* **Aluar valuation**: PDF coming soon
 
 ---
 
 ### Corporate finance
-* **Capital structure**: [Download PDF](assets/pdf/cap_structure.pdf)
-* **Cash flow template (demo)**: [Download PDF](assets/pdf/cashflow_demo.pdf)
+* **Capital structure**: PDF coming soon
+* **Cash flow template (demo)**: PDF coming soon
 
 ---
 [← Back to Home](/)

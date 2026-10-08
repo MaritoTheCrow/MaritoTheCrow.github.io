@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Operative Finance
+title: MCB Advisor | Operative Finance
 ---
 
 # Operative Finance
@@ -9,10 +9,10 @@ Data-driven cash flow management.
 
 ---
 
-- Operating cash flow
+- <span id="cashflow"></span>Operating cash flow
 - Short-term projections
-- Financial KPIs
-- Working capital management
+- <span id="kpi"></span>Financial KPIs
+- <span id="working-capital"></span>Working capital management
 
 ---
 
