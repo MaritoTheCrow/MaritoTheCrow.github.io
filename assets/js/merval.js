@@ -198,7 +198,7 @@
     var sum = pick(r.summary);
     if (sum) { tt.appendChild(el('span', 'rt-title__sum', sum)); }
     var fm = td('rt-format', L.table.format);
-    fm.appendChild(icon(r.format, 'icon--file'));
+    fm.appendChild(icon(['pdf', 'xlsx', 'docx', 'pptx'].indexOf(r.format) > -1 ? r.format : 'file', 'icon--file'));
     fm.appendChild(el('span', null, r.format.toUpperCase()));
     td('num', L.table.size).textContent = fmtSize(r.size_bytes);
     td('rt-lang', L.table.language).textContent = (L.langs && L.langs[r.language]) || r.language;

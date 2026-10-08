@@ -10,7 +10,7 @@
   {%- endif %}
   <td class="rt-type" data-label="{{ L.table.type }}"><span class="badge badge--type">{{ L.types[r.type] | default: r.type }}</span></td>
   <td class="rt-title" data-label="{{ L.table.title }}"><span class="rt-title__text">{{ rtitle }}</span>{% if rsum %}<span class="rt-title__sum">{{ rsum }}</span>{% endif %}</td>
-  <td class="rt-format" data-label="{{ L.table.format }}"><svg class="icon icon--file" aria-hidden="true"><use href="#ico-{{ r.format }}"></use></svg><span>{{ r.format | upcase }}</span></td>
+  <td class="rt-format" data-label="{{ L.table.format }}">{%- assign fico = 'file' -%}{%- if 'pdf xlsx docx pptx' contains r.format -%}{%- assign fico = r.format -%}{%- endif -%}<svg class="icon icon--file" aria-hidden="true"><use href="#ico-{{ fico }}"></use></svg><span>{{ r.format | upcase }}</span></td>
   <td class="num" data-label="{{ L.table.size }}">{{ size_out }}</td>
   <td class="rt-lang" data-label="{{ L.table.language }}">{{ L.langs[r.language] | default: r.language }}</td>
   <td class="rt-access" data-label="{{ L.table.access }}">{% include merval/access-button.html %}</td>
