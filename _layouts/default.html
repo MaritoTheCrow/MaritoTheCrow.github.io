@@ -15,17 +15,21 @@
     {% assign en_url = page.url %}
     {% assign es_url = '/es' | append: page.url %}
   {% endif %}
+  {% if page.lang == 'es' %}{% assign amp_word = ' y ' %}{% else %}{% assign amp_word = ' and ' %}{% endif %}
   {% assign meta_title = page.title | default: site.title %}
   {% assign meta_desc = page.description | default: t.site_subtitle | default: site.description %}
+  {%- comment -%} Social/search previews often show raw entities: write "and"/"y" instead of "&" in meta text. {%- endcomment -%}
+  {% assign meta_title_plain = meta_title | replace: ' & ', amp_word %}
+  {% assign meta_desc_plain = meta_desc | replace: ' & ', amp_word %}
   <title>{{ meta_title }}</title>
-  <meta name="description" content="{{ meta_desc | escape }}">
+  <meta name="description" content="{{ meta_desc_plain | escape }}">
   {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
   <link rel="alternate" hreflang="es" href="{{ es_url | absolute_url }}">
   <link rel="alternate" hreflang="x-default" href="{{ en_url | absolute_url }}">
-  <meta property="og:title" content="{{ meta_title | escape }}">
-  <meta property="og:description" content="{{ meta_desc | escape }}">
+  <meta property="og:title" content="{{ meta_title_plain | escape }}">
+  <meta property="og:description" content="{{ meta_desc_plain | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MCB Advisor">
@@ -33,8 +37,8 @@
   <meta property="og:locale:alternate" content="{% if page.lang == 'es' %}en_US{% else %}es_AR{% endif %}">
   <meta property="og:image" content="{{ '/Logo.png' | absolute_url }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ meta_title | escape }}">
-  <meta name="twitter:description" content="{{ meta_desc | escape }}">
+  <meta name="twitter:title" content="{{ meta_title_plain | escape }}">
+  <meta name="twitter:description" content="{{ meta_desc_plain | escape }}">
   <meta name="theme-color" content="#1a1b1f">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

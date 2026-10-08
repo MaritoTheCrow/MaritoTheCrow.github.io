@@ -47,7 +47,7 @@
     en: Company overview, financial benchmarking and valuation framework (trading multiples and transactions).
     es: Perfil de la empresa, benchmarking financiero y marco de valuación (múltiplos de mercado y transacciones).
   currency: ARS
-- id: agro-2026-01-30-initiation-pdf
+- id: agro-2026-10-07-initiation-pdf
   type: initiation
   format: pdf
   access: free
@@ -60,12 +60,12 @@
   rating: Buy (High Risk)
   target_price: 64.0
   ticker: AGRO
-  date: '2026-01-30'
+  date: '2026-10-07'
   size_bytes: 0
   language: both
   currency: ARS
   pending: true
-- id: agro-2026-01-30-initiation-docx
+- id: agro-2026-10-07-initiation-docx
   type: initiation
   format: docx
   access: contact
@@ -76,7 +76,7 @@
     en: Editable version of the initiation report.
     es: Versión editable del informe de inicio de cobertura.
   ticker: AGRO
-  date: '2026-01-30'
+  date: '2026-10-07'
   size_bytes: 0
   language: both
   currency: ARS

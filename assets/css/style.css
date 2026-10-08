@@ -1222,7 +1222,8 @@ body.mv-modal-open { overflow: hidden; }
 .rt-title__text { display: block; font-weight: 600; color: var(--mcb-maroon); }
 .rt-title__sum { display: block; font-size: 13px; color: var(--mcb-text-soft); margin-top: 2px; }
 .rt-format { white-space: nowrap; }
-.rt-format span { margin-left: 4px; font-family: var(--font-ui); font-size: var(--fs-xs); font-weight: 700; vertical-align: 5px; }
+.rt-format .icon--file { margin-right: var(--space-2); }
+.rt-format span { font-family: var(--font-ui); font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.5px; vertical-align: 5px; }
 .rt-access { white-space: nowrap; }
 .rt-access .badge { margin-right: var(--space-1); }
 .rt-access .btn { margin-top: var(--space-1); }
