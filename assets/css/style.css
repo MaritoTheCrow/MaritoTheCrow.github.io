@@ -38,7 +38,7 @@
 ===================== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background-color: var(--mcb-cream); }
 
 body {
   font-variant-numeric: lining-nums tabular-nums;
@@ -236,11 +236,11 @@ body {
 
 .navbar-menu {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* wraps to two lines instead of overflowing the viewport at ~900-1150px */
   list-style: none;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 10px;
+  gap: 0 10px;
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -1233,7 +1233,8 @@ body.mv-modal-open { overflow: hidden; }
 .rt-access { white-space: nowrap; }
 .rt-access .btn { margin: 0; }
 
-@media (max-width: 900px) {
+/* The 8-column table needs ~900-1000px; below 1100px of viewport it becomes cards so it can never overflow. */
+@media (max-width: 1100px) {
   .data-table thead {
     position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);
   }
@@ -1273,6 +1274,9 @@ body.mv-modal-open { overflow: hidden; }
   .data-table td.rt-title::before { display: block; margin-bottom: 2px; }
   .data-table td.rt-access { flex-wrap: wrap; justify-content: flex-end; }
   .data-table td.rt-format .icon { margin-left: auto; }
+}
+
+@media (max-width: 900px) {
   .mv .kpi-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
