@@ -10,6 +10,7 @@ TWO WAYS TO FEED IT
    * ticker  <- the folder "01. AGRO - Agrometal"      -> AGRO
    * batch   <- the folder "1. 10_2026"                -> 2026-10  (stored as batch: '2026-10')
    * date    <- a date in the file name (2026-10-07 / 20261007) if any, else the file's modified date
+   * language<- read from the file CONTENT (docx/pptx; pdf needs PyMuPDF or pypdf), else the file name; mixed files get "both"
    * type    <- guessed from the file name and format (initiation, update, valuation_model,
                 financial_data, presentation, note); override in the CSV
    The source folder is only READ (never moved, renamed or modified). Sub-folders are included;
@@ -21,7 +22,7 @@ TWO WAYS TO FEED IT
 DEFAULT ACCESS (when the CSV does not say otherwise)
    --source mode:  pdf -> free | docx, pptx -> contact | xlsx and anything else -> subscriber
    naming mode:    --default-access (default subscriber)
-   free        file is copied byte-for-byte into assets/reports/<TICKER>/<date>_<TICKER>_<type>.<ext>
+   free        file is copied byte-for-byte into assets/reports/<TICKER>/<date>_<TICKER>_<type>_<en|es>.<ext>
    contact     metadata only; the file is NEVER copied into the repo
    subscriber  metadata only; the file is NEVER copied into the repo
 
@@ -149,6 +150,62 @@ def guess_type(name, ext):
     return "note"
 
 
+EN_WORDS = set("the and of to in is are was were for with that this on as by at from which has have an be it its our we not but or their these those more than also will would can over after under between while into per".split())
+ES_WORDS = set("el la los las de del y en que se por con para una un es son fue fueron como al lo su sus más pero sobre entre desde también este esta estos estas durante sin cuando donde porque hasta ya no si nuestro nuestra".split())
+
+
+def _extract_units(path):
+    """Text blocks of a document (docx/pptx with the standard library; pdf if PyMuPDF or pypdf is installed)."""
+    ext = path.suffix.lower()
+    try:
+        if ext in (".docx", ".pptx"):
+            import zipfile
+            z = zipfile.ZipFile(path)
+            if ext == ".docx":
+                xml = z.read("word/document.xml").decode("utf8", "replace")
+                return ["".join(re.findall(r"<w:t[^>]*>([^<]*)</w:t>", p)) for p in xml.split("</w:p>")]
+            names = sorted(n for n in z.namelist() if re.match(r"ppt/slides/slide\d+\.xml$", n))
+            return [" ".join(re.findall(r"<a:t>([^<]*)</a:t>", z.read(n).decode("utf8", "replace"))) for n in names]
+        if ext == ".pdf":
+            try:
+                import fitz  # PyMuPDF
+                return [b[4].replace("\n", " ") for pg in fitz.open(path) for b in pg.get_text("blocks")]
+            except ImportError:
+                from pypdf import PdfReader
+                return [pg.extract_text() or "" for pg in PdfReader(str(path)).pages]
+    except Exception:
+        return None
+    return None
+
+
+def detect_language(path):
+    """Return (lang, how). lang is en | es | both (mixed) | None when it cannot be read."""
+    units = _extract_units(path)
+    if not units:
+        return None, "unreadable"
+    n_en = n_es = 0
+    for u in units:
+        words = re.findall(r"[a-záéíóúñü]+", u.lower())
+        if len(words) < 7:
+            continue
+        e, s = sum(w in EN_WORDS for w in words), sum(w in ES_WORDS for w in words)
+        if e + s < 2:
+            continue
+        if e > s * 1.5:
+            n_en += 1
+        elif s > e * 1.5:
+            n_es += 1
+    total = n_en + n_es
+    if total < 3:
+        return None, "too little text"
+    share_es = n_es / total
+    if share_es >= 0.85:
+        return "es", f"content: {n_es}/{total} Spanish blocks"
+    if share_es <= 0.15:
+        return "en", f"content: {n_en}/{total} English blocks"
+    return "both", f"MIXED content: {n_en} English / {n_es} Spanish blocks"
+
+
 def guess_language(name):
     n = re.sub(r"[^a-z0-9]+", " ", name.lower())
     return "es" if re.search(r"valuacion|informe|inicio|estados|balance|actualiz|presentacion", n) else "en"
@@ -199,9 +256,12 @@ def collect_source(source, tickers, overrides, errors):
         if rtype not in TYPES:
             errors.append(f"{src.name}: unknown type '{rtype}'")
             continue
+        det, det_how = detect_language(src)
+        if det is None:
+            det, det_how = guess_language(src.stem), "file name (content not readable)"
         items.append(dict(src=src, ticker=ticker, date=date, date_how=how, type=rtype, ext=ext, ov=ov,
                           batch=ov.get("batch") or batch, auto_access=default_access(ext),
-                          auto_lang=guess_language(src.stem), shown=str(src.relative_to(source))))
+                          auto_lang=det, lang_how=det_how, shown=str(src.relative_to(source))))
     return items
 
 
@@ -275,7 +335,8 @@ def main():
         entry = dict(old) if old else {}
         entry.update({"id": rid, "ticker": ticker, "type": rtype, "date": date, "format": ext,
                       "size_bytes": size, "access": access})
-        lang = ov.get("language") or entry.get("language") or it["auto_lang"]
+        lang = ov.get("language") or it["auto_lang"] or entry.get("language")
+        it["lang_how"] = "csv" if ov.get("language") else it.get("lang_how", "naming mode default")
         if lang not in LANGS:
             errors.append(f"{src.name}: invalid language '{lang}'")
             continue
@@ -301,7 +362,8 @@ def main():
             entry["batch"] = it["batch"]
         entry.pop("pending", None)
 
-        rel = f"{ticker}/{date}_{ticker}_{rtype}.{ext}"
+        suffix = f"_{lang}" if lang in ("en", "es") else ""
+        rel = f"{ticker}/{date}_{ticker}_{rtype}{suffix}.{ext}"
         dest = REPORTS_DIR / rel
         action = "update" if old else "add"
         if old and old.get("pending"):
@@ -324,6 +386,9 @@ def main():
             entry.pop("url", None)
             plan.append((action, src, None, entry, it))
 
+    for it in items:
+        if "MIXED" in it.get("lang_how", ""):
+            warnings.append(f"{it['src'].name}: mixes English and Spanish ({it['lang_how']}); language set to 'both'.")
     for e in errors:
         print("ERROR:", e)
     for w in warnings:
@@ -334,7 +399,7 @@ def main():
     for action, src, dest, entry, it in plan:
         where = f"COPY -> assets/reports/{dest.relative_to(REPORTS_DIR).as_posix()}" if dest else "metadata only (not copied)"
         print(f"  {action:6} {it['shown']}\n         id={entry['id']}  type={entry['type']}  date={entry['date']} (from {it['date_how']})  "
-              f"access={entry['access']}  {entry['format']}  {fmt_bytes(entry['size_bytes'])}  lang={entry['language']}  "
+              f"access={entry['access']}  {entry['format']}  {fmt_bytes(entry['size_bytes'])}  lang={entry['language']} ({it.get('lang_how', '-')})  "
               f"batch={entry.get('batch', '-')}\n         {where}")
 
     if not args.dry_run:

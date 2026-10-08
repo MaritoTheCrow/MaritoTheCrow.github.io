@@ -19,7 +19,7 @@
     es: Caso base de ARS 47,53 por acción (35,4% sobre el cierre de ARS 35,10), con escenarios adverso y favorable de ARS 25,82 y ARS 74,70; DCF con WACC de 16,1%.
   currency: ARS
   batch: 2026-10
-  url: /assets/reports/AGRO/2026-10-07_AGRO_valuation_model.pdf
+  url: /assets/reports/AGRO/2026-10-07_AGRO_valuation_model_es.pdf
 - id: agro-2026-10-07-valuation-model-docx
   ticker: AGRO
   type: valuation_model
@@ -54,7 +54,7 @@
   language: en
   currency: ARS
   batch: 2026-10
-  url: /assets/reports/AGRO/2026-10-07_AGRO_initiation.pdf
+  url: /assets/reports/AGRO/2026-10-07_AGRO_initiation_en.pdf
 - id: agro-2026-10-07-initiation-docx
   type: initiation
   format: docx

@@ -1036,6 +1036,7 @@ body.mv-modal-open { overflow: hidden; }
 .badge--contact { background-color: var(--mcb-sand); color: var(--mcb-maroon); border-color: rgba(var(--mcb-maroon-rgb), 0.25); }
 .badge--subscriber { background-color: var(--mcb-ink); color: var(--mcb-white); }
 .badge--index,
+.badge--lang,
 .badge--type { background-color: transparent; color: var(--mcb-text-soft); border-color: rgba(var(--mcb-maroon-rgb), 0.3); }
 
 /* ---------- layout wrappers ---------- */

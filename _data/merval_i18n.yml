@@ -84,8 +84,8 @@ en:
     pending: "File pending"
     lock: "Locked"
   langs:
-    en: "English"
-    es: "Spanish"
+    en: "EN"
+    es: "ES"
     both: "EN / ES"
   modal:
     close: "Close"
@@ -207,8 +207,8 @@ es:
     pending: "Archivo pendiente"
     lock: "Bloqueado"
   langs:
-    en: "Inglés"
-    es: "Español"
+    en: "EN"
+    es: "ES"
     both: "EN / ES"
   modal:
     close: "Cerrar"
