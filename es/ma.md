@@ -1,6 +1,7 @@
 ---
 layout: default
 title: MCB Advisor | Fusiones y Adquisiciones
+description: "Asesoramiento en fusiones y adquisiciones: valuación de empresas, estructuras de pago, due diligence y estructuración de deals."
 lang: es
 ---
 

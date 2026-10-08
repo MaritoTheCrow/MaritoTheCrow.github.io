@@ -19,6 +19,7 @@
   {% assign meta_desc = page.description | default: t.site_subtitle | default: site.description %}
   <title>{{ meta_title }}</title>
   <meta name="description" content="{{ meta_desc | escape }}">
+  {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
   <link rel="alternate" hreflang="es" href="{{ es_url | absolute_url }}">

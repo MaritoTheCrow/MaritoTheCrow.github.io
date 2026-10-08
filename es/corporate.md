@@ -1,6 +1,7 @@
 ---
 layout: default
 title: MCB Advisor | Finanzas Corporativas
+description: "Asesoramiento en finanzas corporativas para empresas locales: optimización de deuda, costo de capital (WACC), estructura de financiamiento y planificación financiera."
 lang: es
 ---
 

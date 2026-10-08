@@ -1,6 +1,7 @@
 ---
 layout: default
 title: MCB Advisor | Sobre Nosotros
+description: "MCB Advisor es una consultora boutique de finanzas corporativas en Posadas, Misiones, Argentina: valuaciones, Mtitle: MCB Advisor | Sobre NosotrosA y análisis financiero. Información de contacto."
 lang: es
 ---
 

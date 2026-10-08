@@ -1,6 +1,7 @@
 ---
 layout: default
 title: MCB Advisor | Documents & Reports
+description: "Reports, valuation models and downloads from MCB Advisor on capital markets and corporate finance."
 ---
 
 # Consulting archive

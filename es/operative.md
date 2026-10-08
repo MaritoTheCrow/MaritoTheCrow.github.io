@@ -1,6 +1,7 @@
 ---
 layout: default
 title: MCB Advisor | Finanzas Operativas
+description: "Asesoramiento en finanzas operativas: flujo de caja operativo, proyecciones de corto plazo, KPIs financieros y gestión del capital de trabajo."
 lang: es
 ---
 

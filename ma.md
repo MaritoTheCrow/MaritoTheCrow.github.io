@@ -1,6 +1,7 @@
 ---
 layout: default
 title: MCB Advisor | Mergers & Acquisitions
+description: "Mergers and acquisitions advisory: company valuation, payment structures, due diligence and deal structuring."
 ---
 
 <style>

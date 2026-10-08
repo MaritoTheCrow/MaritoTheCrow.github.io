@@ -16,7 +16,7 @@
       <article class="service-card service-card--equal">
         <a class="service-card__media" href="{{ s.path | relative_url }}">
           <div class="service-card__image-wrap">
-            <img class="service-card__image" src="{{ card_img }}" alt="" loading="lazy" decoding="async">
+            <img class="service-card__image" src="{{ card_img }}" alt="{{ s.title | escape }}" loading="lazy" decoding="async">
           </div>
         </a>
         <div class="service-card__content">
@@ -48,7 +48,7 @@
   <div class="pc-grid">
 
     <div class="pc-grid__photo-col">
-      <img class="pc-grid__photo" src="{{ profile_url }}" alt="Mario Cesar Bogado" decoding="async">
+      <img class="pc-grid__photo" src="{{ profile_url }}" alt="{% if page.lang == 'es' %}Mario César Bogado, analista financiero{% else %}Mario César Bogado, financial analyst{% endif %}" loading="lazy" decoding="async">
     </div>
 
     <div class="pc-grid__text-col">

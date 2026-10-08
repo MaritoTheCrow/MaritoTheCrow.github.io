@@ -1,6 +1,9 @@
 ---
 layout: default
 title: MCB Advisor | Panel de Administración
+description: "Panel de administración (acceso restringido)."
+robots: noindex
+sitemap: false
 lang: es
 ---
 

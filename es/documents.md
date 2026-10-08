@@ -1,6 +1,7 @@
 ---
 layout: default
 title: MCB Advisor | Documentos e Informes
+description: "Informes, modelos de valuación y descargas de MCB Advisor sobre mercado de capitales y finanzas corporativas."
 lang: es
 ---
 

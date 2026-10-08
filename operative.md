@@ -1,6 +1,7 @@
 ---
 layout: default
 title: MCB Advisor | Operative Finance
+description: "Operative finance advisory: operating cash flow, short-term projections, financial KPIs and working capital management."
 ---
 
 # Operative Finance
