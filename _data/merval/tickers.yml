@@ -1,0 +1,796 @@
+# Tickers listed on BYMA (Merval index and Panel General).
+# status: covered | coming_soon.  index: Merval | Panel General.
+# verified: false until the ticker, name, sector and index have been checked by hand.
+
+- ticker: AGRO
+  company: "Agrometal S.A.I.C."
+  sector:
+    id: industrial
+    en: "Industrials & machinery"
+    es: "Industriales y maquinaria"
+  index: "Merval"
+  description:
+    en: "Precision seed drill manufacturer, leader in Argentine planting equipment."
+    es: "Fabricante de sembradoras de precisión, líder en equipos de siembra en Argentina."
+  status: covered
+  verified: false
+
+- ticker: ALUA
+  company: "Aluar Aluminio Argentino S.A.I.C."
+  sector:
+    id: materials
+    en: "Materials & metals"
+    es: "Materiales y metales"
+  index: "Merval"
+  description:
+    en: "Primary aluminum producer and exporter, with integrated hydroelectric supply."
+    es: "Productor y exportador de aluminio primario, con abastecimiento hidroeléctrico integrado."
+  status: coming_soon
+  verified: false
+
+- ticker: BBAR
+  company: "Banco BBVA Argentina S.A."
+  sector:
+    id: banks
+    en: "Banks"
+    es: "Bancos"
+  index: "Merval"
+  description:
+    en: "Private universal bank, part of the BBVA group."
+    es: "Banco universal privado, integrante del grupo BBVA."
+  status: coming_soon
+  verified: false
+
+- ticker: BMA
+  company: "Banco Macro S.A."
+  sector:
+    id: banks
+    en: "Banks"
+    es: "Bancos"
+  index: "Merval"
+  description:
+    en: "Private-capital domestic bank with a strong presence in the interior of the country."
+    es: "Banco de capitales privados con fuerte presencia en el interior del país."
+  status: coming_soon
+  verified: false
+
+- ticker: BYMA
+  company: "Bolsas y Mercados Argentinos S.A."
+  sector:
+    id: fin
+    en: "Financial services"
+    es: "Servicios financieros"
+  index: "Merval"
+  description:
+    en: "Operator of the Argentine stock exchange and market infrastructure."
+    es: "Operador de la bolsa argentina y de la infraestructura de mercado."
+  status: coming_soon
+  verified: false
+
+- ticker: CEPU
+  company: "Central Puerto S.A."
+  sector:
+    id: power
+    en: "Power generation"
+    es: "Generación eléctrica"
+  index: "Merval"
+  description:
+    en: "Large private power generator: thermal, hydro and renewables."
+    es: "Importante generador eléctrico privado: térmica, hidráulica y renovables."
+  status: coming_soon
+  verified: false
+
+- ticker: COME
+  company: "Sociedad Comercial del Plata S.A."
+  sector:
+    id: holding
+    en: "Holdings & investment"
+    es: "Holdings e inversiones"
+  index: "Merval"
+  description:
+    en: "Diversified holding with interests in infrastructure, energy and real estate."
+    es: "Holding diversificado con inversiones en infraestructura, energía e inmuebles."
+  status: coming_soon
+  verified: false
+
+- ticker: CRES
+  company: "Cresud S.A.C.I.F. y A."
+  sector:
+    id: realestate
+    en: "Real estate & land"
+    es: "Inmobiliario y tierras"
+  index: "Merval"
+  description:
+    en: "Agricultural land and agribusiness company, controlling shareholder of IRSA."
+    es: "Empresa agropecuaria y de tierras rurales, accionista controlante de IRSA."
+  status: coming_soon
+  verified: false
+
+- ticker: CVH
+  company: "Cablevisión Holding S.A."
+  sector:
+    id: telecom
+    en: "Telecom & media"
+    es: "Telecomunicaciones y medios"
+  index: "Merval"
+  description:
+    en: "Holding of Telecom Argentina, a main telecom and cable operator."
+    es: "Holding de Telecom Argentina, uno de los principales operadores de telecomunicaciones y cable."
+  status: coming_soon
+  verified: false
+
+- ticker: EDN
+  company: "Empresa Distribuidora y Comercializadora Norte S.A. (Edenor)"
+  sector:
+    id: grid
+    en: "Electricity transmission & distribution"
+    es: "Transmisión y distribución eléctrica"
+  index: "Merval"
+  description:
+    en: "Electricity distributor for northern Buenos Aires and the AMBA region."
+    es: "Distribuidora eléctrica del norte del Gran Buenos Aires y el AMBA."
+  status: coming_soon
+  verified: false
+
+- ticker: GGAL
+  company: "Grupo Financiero Galicia S.A."
+  sector:
+    id: banks
+    en: "Banks"
+    es: "Bancos"
+  index: "Merval"
+  description:
+    en: "Financial holding controlling Banco Galicia."
+    es: "Holding financiero controlante de Banco Galicia."
+  status: coming_soon
+  verified: false
+
+- ticker: IRSA
+  company: "IRSA Inversiones y Representaciones S.A."
+  sector:
+    id: realestate
+    en: "Real estate & land"
+    es: "Inmobiliario y tierras"
+  index: "Merval"
+  description:
+    en: "Owner of shopping malls, offices and hotels in Argentina."
+    es: "Propietaria de centros comerciales, oficinas y hoteles en Argentina."
+  status: coming_soon
+  verified: false
+
+- ticker: LOMA
+  company: "Loma Negra C.I.A.S.A."
+  sector:
+    id: materials
+    en: "Materials & metals"
+    es: "Materiales y metales"
+  index: "Merval"
+  description:
+    en: "Cement and construction materials producer."
+    es: "Productor de cemento y materiales para la construcción."
+  status: coming_soon
+  verified: false
+
+- ticker: METR
+  company: "MetroGAS S.A."
+  sector:
+    id: gas
+    en: "Gas transport & distribution"
+    es: "Transporte y distribución de gas"
+  index: "Merval"
+  description:
+    en: "Natural gas distributor in the city of Buenos Aires and its surroundings."
+    es: "Distribuidora de gas natural de la Ciudad de Buenos Aires y alrededores."
+  status: coming_soon
+  verified: false
+
+- ticker: MIRG
+  company: "Mirgor S.A.C.I.F.I.A."
+  sector:
+    id: industrial
+    en: "Industrials & machinery"
+    es: "Industriales y maquinaria"
+  index: "Merval"
+  description:
+    en: "Electronics and air-conditioning manufacturer based in Tierra del Fuego."
+    es: "Fabricante de electrónica y climatización radicado en Tierra del Fuego."
+  status: coming_soon
+  verified: false
+
+- ticker: PAMP
+  company: "Pampa Energía S.A."
+  sector:
+    id: power
+    en: "Power generation"
+    es: "Generación eléctrica"
+  index: "Merval"
+  description:
+    en: "Integrated energy company: generation, oil and gas, and petrochemicals."
+    es: "Empresa de energía integrada: generación, petróleo y gas, y petroquímica."
+  status: coming_soon
+  verified: false
+
+- ticker: SUPV
+  company: "Grupo Supervielle S.A."
+  sector:
+    id: banks
+    en: "Banks"
+    es: "Bancos"
+  index: "Merval"
+  description:
+    en: "Financial group with retail and corporate banking and insurance."
+    es: "Grupo financiero con banca minorista y corporativa y seguros."
+  status: coming_soon
+  verified: false
+
+- ticker: TECO2
+  company: "Telecom Argentina S.A."
+  sector:
+    id: telecom
+    en: "Telecom & media"
+    es: "Telecomunicaciones y medios"
+  index: "Merval"
+  description:
+    en: "Mobile, fixed, broadband and pay-TV operator."
+    es: "Operador de telefonía móvil y fija, banda ancha y televisión paga."
+  status: coming_soon
+  verified: false
+
+- ticker: TGNO4
+  company: "Transportadora de Gas del Norte S.A."
+  sector:
+    id: gas
+    en: "Gas transport & distribution"
+    es: "Transporte y distribución de gas"
+  index: "Merval"
+  description:
+    en: "Natural gas transporter for the northern and central system."
+    es: "Transportista de gas natural del sistema norte y centro del país."
+  status: coming_soon
+  verified: false
+
+- ticker: TGSU2
+  company: "Transportadora de Gas del Sur S.A."
+  sector:
+    id: gas
+    en: "Gas transport & distribution"
+    es: "Transporte y distribución de gas"
+  index: "Merval"
+  description:
+    en: "Major gas transporter with a natural gas liquids business."
+    es: "Importante transportista de gas con negocio de líquidos de gas natural."
+  status: coming_soon
+  verified: false
+
+- ticker: TRAN
+  company: "Compañía de Transporte de Energía Eléctrica en Alta Tensión Transener S.A."
+  sector:
+    id: grid
+    en: "Electricity transmission & distribution"
+    es: "Transmisión y distribución eléctrica"
+  index: "Merval"
+  description:
+    en: "Operator of the national high-voltage electricity transmission network."
+    es: "Operadora de la red nacional de transmisión eléctrica en alta tensión."
+  status: coming_soon
+  verified: false
+
+- ticker: TXAR
+  company: "Ternium Argentina S.A."
+  sector:
+    id: materials
+    en: "Materials & metals"
+    es: "Materiales y metales"
+  index: "Merval"
+  description:
+    en: "Flat and long steel producer, subsidiary of Ternium."
+    es: "Productor de aceros planos y largos, subsidiaria de Ternium."
+  status: coming_soon
+  verified: false
+
+- ticker: VALO
+  company: "Grupo Financiero Valores S.A."
+  sector:
+    id: fin
+    en: "Financial services"
+    es: "Servicios financieros"
+  index: "Merval"
+  description:
+    en: "Financial group with brokerage, asset management and banking activities."
+    es: "Grupo financiero con actividades de bolsa, administración de activos y banca."
+  status: coming_soon
+  verified: false
+
+- ticker: YPFD
+  company: "YPF S.A."
+  sector:
+    id: oil
+    en: "Oil & gas"
+    es: "Petróleo y gas"
+  index: "Merval"
+  description:
+    en: "Argentina's largest integrated oil and gas company."
+    es: "Mayor empresa integrada de petróleo y gas de Argentina."
+  status: coming_soon
+  verified: false
+
+- ticker: AUSO
+  company: "Autopistas del Sol S.A."
+  sector:
+    id: infra
+    en: "Construction & infrastructure"
+    es: "Construcción e infraestructura"
+  index: "Panel General"
+  description:
+    en: "Toll road concession on access routes to Buenos Aires."
+    es: "Concesión de peaje de accesos a la Ciudad de Buenos Aires."
+  status: coming_soon
+  verified: false
+
+- ticker: BHIP
+  company: "Banco Hipotecario S.A."
+  sector:
+    id: banks
+    en: "Banks"
+    es: "Bancos"
+  index: "Panel General"
+  description:
+    en: "Mortgage-focused bank with a nationwide retail network."
+    es: "Banco especializado en créditos hipotecarios con red minorista nacional."
+  status: coming_soon
+  verified: false
+
+- ticker: BPAT
+  company: "Banco Patagonia S.A."
+  sector:
+    id: banks
+    en: "Banks"
+    es: "Bancos"
+  index: "Panel General"
+  description:
+    en: "Regional bank with a strong presence in Patagonia and Buenos Aires."
+    es: "Banco regional con fuerte presencia en la Patagonia y Buenos Aires."
+  status: coming_soon
+  verified: false
+
+- ticker: BOLT
+  company: "Boldt S.A."
+  sector:
+    id: consumer
+    en: "Consumer"
+    es: "Consumo"
+  index: "Panel General"
+  description:
+    en: "Gaming, telecom and technology services group."
+    es: "Grupo de juegos de azar, telecomunicaciones y servicios tecnológicos."
+  status: coming_soon
+  verified: false
+
+- ticker: CAPX
+  company: "Capex S.A."
+  sector:
+    id: power
+    en: "Power generation"
+    es: "Generación eléctrica"
+  index: "Panel General"
+  description:
+    en: "Thermal power generator and oil and gas producer in Neuquén."
+    es: "Generadora termoeléctrica y productora de petróleo y gas en Neuquén."
+  status: coming_soon
+  verified: false
+
+- ticker: CARC
+  company: "Carboclor S.A."
+  sector:
+    id: materials
+    en: "Materials & metals"
+    es: "Materiales y metales"
+  index: "Panel General"
+  description:
+    en: "Petrochemical producer of benzene, toluene and derivatives."
+    es: "Productor petroquímico de benceno, tolueno y derivados."
+  status: coming_soon
+  verified: false
+
+- ticker: CADO
+  company: "Carlos Casado S.A."
+  sector:
+    id: realestate
+    en: "Real estate & land"
+    es: "Inmobiliario y tierras"
+  index: "Panel General"
+  description:
+    en: "Land and agribusiness company with holdings in Argentina and Paraguay."
+    es: "Empresa de tierras y agronegocios con activos en Argentina y Paraguay."
+  status: coming_soon
+  verified: false
+
+- ticker: CELU
+  company: "Celulosa Argentina S.A."
+  sector:
+    id: materials
+    en: "Materials & metals"
+    es: "Materiales y metales"
+  index: "Panel General"
+  description:
+    en: "Pulp and paper producer."
+    es: "Productora de celulosa y papel."
+  status: coming_soon
+  verified: false
+
+- ticker: CECO2
+  company: "Central Costanera S.A."
+  sector:
+    id: power
+    en: "Power generation"
+    es: "Generación eléctrica"
+  index: "Panel General"
+  description:
+    en: "Thermal power plant operator on the Río de la Plata."
+    es: "Operadora de una central termoeléctrica sobre el Río de la Plata."
+  status: coming_soon
+  verified: false
+
+- ticker: CGPA2
+  company: "Camuzzi Gas Pampeana S.A."
+  sector:
+    id: gas
+    en: "Gas transport & distribution"
+    es: "Transporte y distribución de gas"
+  index: "Panel General"
+  description:
+    en: "Natural gas distributor in the Pampas region."
+    es: "Distribuidora de gas natural de la región pampeana."
+  status: coming_soon
+  verified: false
+
+- ticker: CTIO
+  company: "Consultatio S.A."
+  sector:
+    id: realestate
+    en: "Real estate & land"
+    es: "Inmobiliario y tierras"
+  index: "Panel General"
+  description:
+    en: "Real estate developer and asset manager."
+    es: "Desarrolladora inmobiliaria y administradora de activos."
+  status: coming_soon
+  verified: false
+
+- ticker: DGCU2
+  company: "Distribuidora de Gas Cuyana S.A."
+  sector:
+    id: gas
+    en: "Gas transport & distribution"
+    es: "Transporte y distribución de gas"
+  index: "Panel General"
+  description:
+    en: "Natural gas distributor in the Cuyo region."
+    es: "Distribuidora de gas natural de la región de Cuyo."
+  status: coming_soon
+  verified: false
+
+- ticker: ECOG
+  company: "Distribuidora de Gas del Centro S.A. (Ecogas)"
+  sector:
+    id: gas
+    en: "Gas transport & distribution"
+    es: "Transporte y distribución de gas"
+  index: "Panel General"
+  description:
+    en: "Natural gas distributor in the center of the country."
+    es: "Distribuidora de gas natural del centro del país."
+  status: coming_soon
+  verified: false
+
+- ticker: FERR
+  company: "Ferrum S.A. de Cerámica y Metalurgia"
+  sector:
+    id: industrial
+    en: "Industrials & machinery"
+    es: "Industriales y maquinaria"
+  index: "Panel General"
+  description:
+    en: "Sanitaryware and bathroom products manufacturer."
+    es: "Fabricante de sanitarios y productos para el baño."
+  status: coming_soon
+  verified: false
+
+- ticker: FIPL
+  company: "Fiplasto S.A."
+  sector:
+    id: industrial
+    en: "Industrials & machinery"
+    es: "Industriales y maquinaria"
+  index: "Panel General"
+  description:
+    en: "Wood-based panels and boards manufacturer."
+    es: "Fabricante de tableros y placas de madera."
+  status: coming_soon
+  verified: false
+
+- ticker: GARO
+  company: "Garovaglio y Zorraquín S.A."
+  sector:
+    id: realestate
+    en: "Real estate & land"
+    es: "Inmobiliario y tierras"
+  index: "Panel General"
+  description:
+    en: "Agricultural and real estate holding company."
+    es: "Sociedad agropecuaria e inmobiliaria."
+  status: coming_soon
+  verified: false
+
+- ticker: GBAN
+  company: "Naturgy BAN S.A."
+  sector:
+    id: gas
+    en: "Gas transport & distribution"
+    es: "Transporte y distribución de gas"
+  index: "Panel General"
+  description:
+    en: "Natural gas distributor in northern Greater Buenos Aires."
+    es: "Distribuidora de gas natural del norte del Gran Buenos Aires."
+  status: coming_soon
+  verified: false
+
+- ticker: GRIM
+  company: "Grimoldi S.A."
+  sector:
+    id: consumer
+    en: "Consumer"
+    es: "Consumo"
+  index: "Panel General"
+  description:
+    en: "Footwear manufacturer and retailer."
+    es: "Fabricante y comercializadora de calzado."
+  status: coming_soon
+  verified: false
+
+- ticker: GCLA
+  company: "Grupo Clarín S.A."
+  sector:
+    id: telecom
+    en: "Telecom & media"
+    es: "Telecomunicaciones y medios"
+  index: "Panel General"
+  description:
+    en: "Media group with print, broadcast and digital assets."
+    es: "Grupo de medios con activos gráficos, audiovisuales y digitales."
+  status: coming_soon
+  verified: false
+
+- ticker: HAVA
+  company: "Havanna Holding S.A."
+  sector:
+    id: food
+    en: "Food & beverages"
+    es: "Alimentos y bebidas"
+  index: "Panel General"
+  description:
+    en: "Premium confectionery, alfajores and coffee shop chain."
+    es: "Cadena de confitería premium, alfajores y cafeterías."
+  status: coming_soon
+  verified: false
+
+- ticker: HARG
+  company: "Holcim (Argentina) S.A."
+  sector:
+    id: materials
+    en: "Materials & metals"
+    es: "Materiales y metales"
+  index: "Panel General"
+  description:
+    en: "Cement, aggregates and concrete producer."
+    es: "Productor de cemento, áridos y hormigón."
+  status: coming_soon
+  verified: false
+
+- ticker: INVJ
+  company: "Inversora Juramento S.A."
+  sector:
+    id: food
+    en: "Food & beverages"
+    es: "Alimentos y bebidas"
+  index: "Panel General"
+  description:
+    en: "Agribusiness company with cattle and agriculture operations in Salta."
+    es: "Empresa agroindustrial con ganadería y agricultura en Salta."
+  status: coming_soon
+  verified: false
+
+- ticker: LEDE
+  company: "Ledesma S.A.A.I."
+  sector:
+    id: food
+    en: "Food & beverages"
+    es: "Alimentos y bebidas"
+  index: "Panel General"
+  description:
+    en: "Sugar, paper, citrus and agribusiness conglomerate."
+    es: "Conglomerado agroindustrial de azúcar, papel y cítricos."
+  status: coming_soon
+  verified: false
+
+- ticker: LONG
+  company: "Longvie S.A."
+  sector:
+    id: consumer
+    en: "Consumer"
+    es: "Consumo"
+  index: "Panel General"
+  description:
+    en: "Kitchen stoves and home appliances manufacturer."
+    es: "Fabricante de cocinas y electrodomésticos."
+  status: coming_soon
+  verified: false
+
+- ticker: MOLA
+  company: "Molinos Agro S.A."
+  sector:
+    id: food
+    en: "Food & beverages"
+    es: "Alimentos y bebidas"
+  index: "Panel General"
+  description:
+    en: "Grain and oilseed processor and exporter."
+    es: "Procesadora y exportadora de granos y oleaginosas."
+  status: coming_soon
+  verified: false
+
+- ticker: MOLI
+  company: "Molinos Río de la Plata S.A."
+  sector:
+    id: food
+    en: "Food & beverages"
+    es: "Alimentos y bebidas"
+  index: "Panel General"
+  description:
+    en: "Packaged food producer with leading consumer brands."
+    es: "Productora de alimentos envasados con marcas líderes de consumo."
+  status: coming_soon
+  verified: false
+
+- ticker: MORI
+  company: "Morixe Hermanos S.A.C.I."
+  sector:
+    id: food
+    en: "Food & beverages"
+    es: "Alimentos y bebidas"
+  index: "Panel General"
+  description:
+    en: "Flour, pasta and food products producer."
+    es: "Productora de harinas, pastas y alimentos."
+  status: coming_soon
+  verified: false
+
+- ticker: RICH
+  company: "Laboratorios Richmond S.A.C.I.F."
+  sector:
+    id: health
+    en: "Health"
+    es: "Salud"
+  index: "Panel General"
+  description:
+    en: "Pharmaceutical laboratory."
+    es: "Laboratorio farmacéutico."
+  status: coming_soon
+  verified: false
+
+- ticker: SAMI
+  company: "San Miguel A.G.I.C.I. y F."
+  sector:
+    id: food
+    en: "Food & beverages"
+    es: "Alimentos y bebidas"
+  index: "Panel General"
+  description:
+    en: "Citrus producer and exporter in northwest Argentina."
+    es: "Productora y exportadora de cítricos del noroeste argentino."
+  status: coming_soon
+  verified: false
+
+- ticker: DYCA
+  company: "Dycasa S.A."
+  sector:
+    id: infra
+    en: "Construction & infrastructure"
+    es: "Construcción e infraestructura"
+  index: "Panel General"
+  description:
+    en: "Civil and industrial construction company."
+    es: "Empresa de construcción civil e industrial."
+  status: coming_soon
+  verified: false
+
+- ticker: PATA
+  company: "Importadora y Exportadora de la Patagonia S.A."
+  sector:
+    id: consumer
+    en: "Consumer"
+    es: "Consumo"
+  index: "Panel General"
+  description:
+    en: "Supermarket chain in Patagonia."
+    es: "Cadena de supermercados en la Patagonia."
+  status: coming_soon
+  verified: false
+
+- ticker: SEMI
+  company: "Molinos Juan Semino S.A."
+  sector:
+    id: food
+    en: "Food & beverages"
+    es: "Alimentos y bebidas"
+  index: "Panel General"
+  description:
+    en: "Flour and food products producer."
+    es: "Productora de harinas y alimentos."
+  status: coming_soon
+  verified: false
+
+- ticker: RIGO
+  company: "Rigolleau S.A."
+  sector:
+    id: industrial
+    en: "Industrials & machinery"
+    es: "Industriales y maquinaria"
+  index: "Panel General"
+  description:
+    en: "Glass tableware and containers manufacturer."
+    es: "Fabricante de vajilla y envases de vidrio."
+  status: coming_soon
+  verified: false
+
+- ticker: OEST
+  company: "Grupo Concesionario del Oeste S.A."
+  sector:
+    id: infra
+    en: "Construction & infrastructure"
+    es: "Construcción e infraestructura"
+  index: "Panel General"
+  description:
+    en: "Toll road concession on the western access to Buenos Aires."
+    es: "Concesión de peaje del acceso oeste a Buenos Aires."
+  status: coming_soon
+  verified: false
+
+- ticker: ROSE
+  company: "Instituto Rosenbusch S.A."
+  sector:
+    id: health
+    en: "Health"
+    es: "Salud"
+  index: "Panel General"
+  description:
+    en: "Veterinary vaccines and animal health products."
+    es: "Vacunas veterinarias y productos de sanidad animal."
+  status: coming_soon
+  verified: false
+
+- ticker: POLL
+  company: "Polledo S.A."
+  sector:
+    id: infra
+    en: "Construction & infrastructure"
+    es: "Construcción e infraestructura"
+  index: "Panel General"
+  description:
+    en: "Construction and real estate company."
+    es: "Empresa de construcción e inmobiliaria."
+  status: coming_soon
+  verified: false
+
+- ticker: DOME
+  company: "Domec S.A."
+  sector:
+    id: industrial
+    en: "Industrials & machinery"
+    es: "Industriales y maquinaria"
+  index: "Panel General"
+  description:
+    en: "Domestic stoves and kitchen appliances manufacturer."
+    es: "Fabricante de cocinas y artefactos de uso doméstico."
+  status: coming_soon
+  verified: false

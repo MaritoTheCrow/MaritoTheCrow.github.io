@@ -1,0 +1,5 @@
+# One entry per document. Managed by tools/add_reports.py (you can also edit by hand).
+# access: free | contact | subscriber.  Only "free" entries may have a url.
+# size_bytes: file size in bytes.  language: en | es | both.
+# pending: true marks an entry whose file has not been provided yet.
+[]

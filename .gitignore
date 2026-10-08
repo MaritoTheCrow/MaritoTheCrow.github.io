@@ -1,0 +1,13 @@
+# --- Merval Analysis: gated files must NEVER be committed ---
+# Only files with access: free live in assets/reports/<TICKER>/. Keep gated files elsewhere.
+assets/reports/**/gated/
+assets/reports/**/*.gated.*
+_gated/
+private/
+# local tooling
+venv/
+_site/
+.jekyll-cache/
+.sass-cache/
+Gemfile.lock
+tools/__pycache__/

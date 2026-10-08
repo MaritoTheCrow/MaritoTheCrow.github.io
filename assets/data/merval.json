@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /assets/data/merval.json
+---
+{%- assign tks = site.data.merval.tickers -%}
+{%- assign rps = site.data.merval.reports -%}
+{
+  "generated": {{ site.time | date: "%Y-%m-%d" | jsonify }},
+  "tickers": [
+{%- for t in tks %}
+    {"ticker": {{ t.ticker | jsonify }}, "company": {{ t.company | jsonify }}, "sector": {{ t.sector | jsonify }}, "index": {{ t.index | jsonify }}, "description": {{ t.description | jsonify }}, "status": {{ t.status | jsonify }}}{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+  ],
+  "reports": [
+{%- for r in rps %}
+    {"id": {{ r.id | jsonify }}, "ticker": {{ r.ticker | jsonify }}, "title": {{ r.title | jsonify }}, "type": {{ r.type | jsonify }}, "date": {{ r.date | jsonify }}, "format": {{ r.format | jsonify }}, "size_bytes": {{ r.size_bytes | default: 0 }}, "language": {{ r.language | jsonify }}, "access": {{ r.access | jsonify }}, "url": {% if r.access == "free" and r.url %}{{ r.url | relative_url | jsonify }}{% else %}null{% endif %}, "summary": {{ r.summary | jsonify }}, "rating": {{ r.rating | jsonify }}, "target_price": {{ r.target_price | default: "null" }}, "currency": {{ r.currency | jsonify }}, "pending": {% if r.pending %}true{% else %}false{% endif %}}{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+  ]
+}
