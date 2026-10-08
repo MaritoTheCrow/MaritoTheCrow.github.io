@@ -65,6 +65,8 @@ en:
     language: "Language"
     access: "Access"
     ticker: "Ticker"
+    more: "more"
+    less: "less"
   types:
     initiation: "Initiation"
     update: "Update"
@@ -186,6 +188,8 @@ es:
     language: "Idioma"
     access: "Acceso"
     ticker: "Ticker"
+    more: "más"
+    less: "menos"
   types:
     initiation: "Inicio de cobertura"
     update: "Actualización"

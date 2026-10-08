@@ -44,6 +44,12 @@
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     return parts[0] + ',' + parts[1];
   }
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  function fmtDate(iso) {
+    var p = String(iso).split('-');
+    if (p.length !== 3) { return iso; }
+    return cfg.lang === 'es' ? p[2] + '/' + p[1] + '/' + p[0] : p[2] + ' ' + MONTHS[parseInt(p[1], 10) - 1] + ' ' + p[0];
+  }
   function fmtSize(bytes) {
     if (!bytes) { return '—'; }
     return bytes >= 1048576 ? fmt1(bytes / 1048576) + ' MB' : fmt1(bytes / 1024) + ' KB';
@@ -178,7 +184,10 @@
       tr.appendChild(c);
       return c;
     }
-    td('rt-date', L.table.date).textContent = r.date;
+    var dt = td('rt-date', L.table.date);
+    var tm = el('time', null, fmtDate(r.date));
+    tm.setAttribute('datetime', r.date);
+    dt.appendChild(tm);
     var tk = td('rt-ticker', L.table.ticker);
     var link = el('a', null, r.ticker);
     link.href = cfg.ticker_base + r.ticker.toLowerCase() + '/';
@@ -194,8 +203,6 @@
     td('num', L.table.size).textContent = fmtSize(r.size_bytes);
     td('rt-lang', L.table.language).textContent = (L.langs && L.langs[r.language]) || r.language;
     var ac = td('rt-access', L.table.access);
-    ac.appendChild(el('span', 'badge badge--' + r.access, L.access[r.access]));
-    ac.appendChild(document.createTextNode(' '));
     ac.appendChild(accessButton(r));
     return tr;
   }
@@ -217,7 +224,10 @@
     list.slice(0, MAX_ROWS).forEach(function (r) { tbody.appendChild(reportRow(r)); });
     table.appendChild(tbody);
     wrap.appendChild(table);
+    wrap.setAttribute('data-more', L.table.more);
+    wrap.setAttribute('data-less', L.table.less);
     resultsTable.appendChild(wrap);
+    if (window.MervalReports) { window.MervalReports.init(wrap); }
   }
 
   // ---------- main update ----------

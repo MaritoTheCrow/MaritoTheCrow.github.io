@@ -21,9 +21,9 @@ collections:
 
 defaults:
   - scope: { path: "", type: merval }
-    values: { layout: ticker, lang: en }
+    values: { layout: ticker, lang: en, scripts: [reports] }
   - scope: { path: "", type: merval_es }
-    values: { layout: ticker, lang: es }
+    values: { layout: ticker, lang: es, scripts: [reports] }
 
 exclude:
   - venv

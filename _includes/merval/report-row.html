@@ -2,8 +2,9 @@
 {%- assign rtitle = r.title[lang] | default: r.title.en -%}
 {%- assign rsum = r.summary[lang] | default: r.summary.en -%}
 {%- assign size_in = r.size_bytes -%}{%- include merval/size.html -%}
+{%- assign date_in = r.date -%}{%- include merval/date.html -%}
 <tr class="rt-row" id="r-{{ r.id }}">
-  <td class="rt-date" data-label="{{ L.table.date }}">{{ r.date }}</td>
+  <td class="rt-date" data-label="{{ L.table.date }}"><time datetime="{{ r.date }}">{{ date_out }}</time></td>
   {%- if show_ticker %}
   <td class="rt-ticker" data-label="{{ L.table.ticker }}"><a href="{{ lp | append: '/valuations/merval/' | append: r.ticker | downcase | append: '/' | relative_url }}">{{ r.ticker }}</a></td>
   {%- endif %}
@@ -12,5 +13,5 @@
   <td class="rt-format" data-label="{{ L.table.format }}"><svg class="icon icon--file" aria-hidden="true"><use href="#ico-{{ r.format }}"></use></svg><span>{{ r.format | upcase }}</span></td>
   <td class="num" data-label="{{ L.table.size }}">{{ size_out }}</td>
   <td class="rt-lang" data-label="{{ L.table.language }}">{{ L.langs[r.language] | default: r.language }}</td>
-  <td class="rt-access" data-label="{{ L.table.access }}"><span class="badge badge--{{ r.access }}">{{ L.access[r.access] }}</span> {% include merval/access-button.html %}</td>
+  <td class="rt-access" data-label="{{ L.table.access }}">{% include merval/access-button.html %}</td>
 </tr>

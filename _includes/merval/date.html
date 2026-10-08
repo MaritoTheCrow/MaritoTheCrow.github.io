@@ -1,0 +1,2 @@
+{%- comment -%} In: date_in (YYYY-MM-DD). Out: date_out. EN "07 Oct 2026", ES "07/10/2026". Data files stay ISO. {%- endcomment -%}
+{%- if page.lang == 'es' -%}{%- assign date_out = date_in | date: '%d/%m/%Y' -%}{%- else -%}{%- assign date_out = date_in | date: '%d %b %Y' -%}{%- endif -%}

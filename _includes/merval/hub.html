@@ -24,7 +24,7 @@
     <li class="kpi"><span class="kpi__value">{{ covered.size }}</span><span class="kpi__label">{{ L.hub.kpi_covered }}</span></li>
     <li class="kpi"><span class="kpi__value">{{ tickers.size }}</span><span class="kpi__label">{{ L.hub.kpi_listed }}</span></li>
     <li class="kpi"><span class="kpi__value">{{ pub_reports.size }}</span><span class="kpi__label">{{ L.hub.kpi_reports }}</span></li>
-    <li class="kpi"><span class="kpi__value kpi__value--date">{% if latest_date %}{{ latest_date.date }}{% else %}—{% endif %}</span><span class="kpi__label">{{ L.hub.kpi_latest }}</span></li>
+    <li class="kpi"><span class="kpi__value kpi__value--date">{% if latest_date %}{% assign date_in = latest_date.date %}{% include merval/date.html %}{{ date_out }}{% else %}—{% endif %}</span><span class="kpi__label">{{ L.hub.kpi_latest }}</span></li>
   </ul>
 
   <section class="mv-section" aria-labelledby="mv-dir-title">

@@ -32,7 +32,7 @@
       {%- if rated.target_price %}
       <div><dt>{{ L.ticker.target }}</dt><dd class="rating-box__target"><span class="rating-box__cur">{{ rated.currency }}</span> <span class="num">{{ num_out }}</span></dd></div>
       {%- endif %}
-      <div><dt>{{ L.ticker.as_of }}</dt><dd>{{ rated.date }}</dd></div>
+      <div><dt>{{ L.ticker.as_of }}</dt>{%- assign date_in = rated.date -%}{%- include merval/date.html -%}<dd><time datetime="{{ rated.date }}">{{ date_out }}</time></dd></div>
     </dl>
     {%- endif %}
 
