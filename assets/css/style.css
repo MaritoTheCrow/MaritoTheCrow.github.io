@@ -1266,6 +1266,7 @@ body.mv-modal-open { overflow: hidden; }
   .data-table td.rt-title { display: block; text-align: left; }
   .data-table td.rt-title::before { display: block; margin-bottom: 2px; }
   .data-table td.rt-access { flex-wrap: wrap; justify-content: flex-end; }
+  .data-table td.rt-format .icon { margin-left: auto; }
   .mv .kpi-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
