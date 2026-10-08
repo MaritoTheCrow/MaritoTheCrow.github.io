@@ -2,4 +2,187 @@
 # access: free | contact | subscriber.  Only "free" entries may have a url.
 # size_bytes: file size in bytes.  language: en | es | both.
 # pending: true marks an entry whose file has not been provided yet.
-[]
+- id: agro-2026-10-07-financial-data-xlsx
+  ticker: AGRO
+  type: financial_data
+  date: '2026-10-07'
+  format: xlsx
+  size_bytes: 45252
+  access: subscriber
+  language: both
+  title:
+    en: Agrometal - Outlooks workbook (Excel)
+    es: Agrometal - Planilla de Outlooks (Excel)
+  summary:
+    en: Six outlooks generated from the AGRO financial database.
+    es: Seis outlooks generados a partir de la base de datos financiera de AGRO.
+  currency: ARS
+- id: agro-2026-06-30-valuation-model-xlsx
+  ticker: AGRO
+  type: valuation_model
+  date: '2026-06-30'
+  format: xlsx
+  size_bytes: 385209
+  access: subscriber
+  language: both
+  title:
+    en: Agrometal - Valuation model (Excel)
+    es: Agrometal - Modelo de valuación (Excel)
+  summary:
+    en: Assumptions, macro scenario, balance sheet and income statement forecasts, WACC, valuation, sensitivity and multiples.
+    es: Supuestos, escenario macro, proyecciones de balance y estado de resultados, WACC, valuación, sensibilidad y múltiplos.
+  currency: ARS
+- id: agro-2026-01-30-presentation-pptx
+  ticker: AGRO
+  type: presentation
+  date: '2026-01-30'
+  format: pptx
+  size_bytes: 707936
+  access: contact
+  language: en
+  title:
+    en: Agrometal - Valuation report (presentation)
+    es: Agrometal - Informe de valuación (presentación)
+  summary:
+    en: Company overview, financial benchmarking and valuation framework (trading multiples and transactions).
+    es: Perfil de la empresa, benchmarking financiero y marco de valuación (múltiplos de mercado y transacciones).
+  currency: ARS
+- id: agro-2026-01-30-initiation-pdf
+  type: initiation
+  format: pdf
+  access: free
+  title:
+    en: Agrometal - Initiation of coverage
+    es: Agrometal - Inicio de cobertura
+  summary:
+    en: Initiation of coverage with valuation by DCF and multiples.
+    es: Inicio de cobertura con valuación por DCF y múltiplos.
+  rating: Buy (High Risk)
+  target_price: 64.0
+  ticker: AGRO
+  date: '2026-01-30'
+  size_bytes: 0
+  language: both
+  currency: ARS
+  pending: true
+- id: agro-2026-01-30-initiation-docx
+  type: initiation
+  format: docx
+  access: contact
+  title:
+    en: Agrometal - Initiation of coverage (Word)
+    es: Agrometal - Inicio de cobertura (Word)
+  summary:
+    en: Editable version of the initiation report.
+    es: Versión editable del informe de inicio de cobertura.
+  ticker: AGRO
+  date: '2026-01-30'
+  size_bytes: 0
+  language: both
+  currency: ARS
+  pending: true
+- id: agro-2025-09-30-financial-data-xlsx
+  ticker: AGRO
+  type: financial_data
+  date: '2025-09-30'
+  format: xlsx
+  size_bytes: 358354
+  access: subscriber
+  language: both
+  title:
+    en: Agrometal - Financial statements Q3 2025 (Excel)
+    es: Agrometal - Estados financieros 3T 2025 (Excel)
+  summary:
+    en: Financial statements data file, third quarter 2025.
+    es: Archivo de datos de los estados financieros, tercer trimestre 2025.
+  currency: ARS
+- id: agro-2024-12-31-financial-data-xlsx
+  ticker: AGRO
+  type: financial_data
+  date: '2024-12-31'
+  format: xlsx
+  size_bytes: 462900
+  access: subscriber
+  language: both
+  title:
+    en: Agrometal - Financial statements 2024 (Excel)
+    es: Agrometal - Estados financieros 2024 (Excel)
+  summary:
+    en: Financial statements data file, fiscal year 2024.
+    es: Archivo de datos de los estados financieros, ejercicio 2024.
+  currency: ARS
+- id: agro-2023-12-31-financial-data-xlsx
+  ticker: AGRO
+  type: financial_data
+  date: '2023-12-31'
+  format: xlsx
+  size_bytes: 336772
+  access: subscriber
+  language: both
+  title:
+    en: Agrometal - Financial statements 2023 (Excel)
+    es: Agrometal - Estados financieros 2023 (Excel)
+  summary:
+    en: Financial statements data file, fiscal year 2023.
+    es: Archivo de datos de los estados financieros, ejercicio 2023.
+  currency: ARS
+- id: agro-2022-12-31-financial-data-xlsx
+  ticker: AGRO
+  type: financial_data
+  date: '2022-12-31'
+  format: xlsx
+  size_bytes: 339208
+  access: subscriber
+  language: both
+  title:
+    en: Agrometal - Financial statements 2022 (Excel)
+    es: Agrometal - Estados financieros 2022 (Excel)
+  summary:
+    en: Financial statements data file, fiscal year 2022.
+    es: Archivo de datos de los estados financieros, ejercicio 2022.
+  currency: ARS
+- id: agro-2021-12-31-financial-data-xlsx
+  ticker: AGRO
+  type: financial_data
+  date: '2021-12-31'
+  format: xlsx
+  size_bytes: 199463
+  access: subscriber
+  language: both
+  title:
+    en: Agrometal - Financial statements 2021 (Excel)
+    es: Agrometal - Estados financieros 2021 (Excel)
+  summary:
+    en: Financial statements data file, fiscal year 2021.
+    es: Archivo de datos de los estados financieros, ejercicio 2021.
+  currency: ARS
+- id: agro-2020-12-31-financial-data-xlsx
+  ticker: AGRO
+  type: financial_data
+  date: '2020-12-31'
+  format: xlsx
+  size_bytes: 17924
+  access: subscriber
+  language: both
+  title:
+    en: Agrometal - Financial statements 2020 (Excel)
+    es: Agrometal - Estados financieros 2020 (Excel)
+  summary:
+    en: Financial statements data file, fiscal year 2020.
+    es: Archivo de datos de los estados financieros, ejercicio 2020.
+  currency: ARS
+- id: agro-2019-12-31-financial-data-xlsx
+  ticker: AGRO
+  type: financial_data
+  date: '2019-12-31'
+  format: xlsx
+  size_bytes: 2780855
+  access: subscriber
+  language: both
+  title:
+    en: Agrometal - Financial statements 2019 (Excel)
+    es: Agrometal - Estados financieros 2019 (Excel)
+  summary:
+    en: Financial statements data file, fiscal year 2019.
+    es: Archivo de datos de los estados financieros, ejercicio 2019.
+  currency: ARS
