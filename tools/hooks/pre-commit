@@ -1,0 +1,15 @@
+#!/bin/sh
+# Pre-commit: block gated files and keep ticker pages in sync.
+# Enabled once with:  git config core.hooksPath tools/hooks
+root=$(git rev-parse --show-toplevel)
+py=""
+for cmd in "py -3" python3 python; do
+  if $cmd -c "import yaml" >/dev/null 2>&1; then py="$cmd"; break; fi
+done
+if [ -z "$py" ]; then
+  echo "pre-commit: Python 3 with PyYAML not found; cannot verify gated files. Commit blocked." >&2
+  exit 1
+fi
+$py "$root/tools/check_gated.py" --staged || exit 1
+$py "$root/tools/sync_ticker_pages.py" --check || exit 1
+exit 0
