@@ -1,0 +1,20 @@
+{%- comment -%} In: rows (array of reports), show_ticker, L, lp, lang. {%- endcomment -%}
+<div class="table-wrap">
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th scope="col">{{ L.table.date }}</th>
+        {%- if show_ticker %}<th scope="col">{{ L.table.ticker }}</th>{% endif %}
+        <th scope="col">{{ L.table.type }}</th>
+        <th scope="col">{{ L.table.title }}</th>
+        <th scope="col">{{ L.table.format }}</th>
+        <th scope="col" class="num">{{ L.table.size }}</th>
+        <th scope="col">{{ L.table.language }}</th>
+        <th scope="col">{{ L.table.access }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for r in rows %}{% include merval/report-row.html %}{% endfor %}
+    </tbody>
+  </table>
+</div>

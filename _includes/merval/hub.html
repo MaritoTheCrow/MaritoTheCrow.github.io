@@ -1,0 +1,126 @@
+{%- include merval/setup.html -%}
+{%- include merval/icons.html -%}
+{%- assign covered = tickers | where: 'status', 'covered' -%}
+{%- assign latest_sorted = pub_reports | sort: 'date' | reverse -%}
+{%- assign latest_date = latest_sorted | first -%}
+{%- assign sector_groups = tickers | group_by_exp: 'x', 'x.sector.id' | sort: 'name' -%}
+<div class="mv">
+  <nav class="breadcrumbs" aria-label="{{ L.ticker.breadcrumb_label }}">
+    <ol>
+      <li><a href="{{ lp | append: '/' | relative_url }}">{{ L.home }}</a></li>
+      <li><a href="{{ lp | append: '/valuations/' | relative_url }}">{{ L.valuations }}</a></li>
+      <li aria-current="page">{{ L.section }}</li>
+    </ol>
+  </nav>
+
+  <header class="mv-hero">
+    <h1 class="mv-title">{{ L.hub.heading }}</h1>
+    <p class="mv-lead">{{ L.hub.lead }}</p>
+    <p class="mv-lead">{{ L.hub.lead2 }}</p>
+    <blockquote class="mv-quote">{{ L.hub.quote }}</blockquote>
+  </header>
+
+  <ul class="kpi-grid" aria-label="{{ L.hub.heading }}">
+    <li class="kpi"><span class="kpi__value">{{ covered.size }}</span><span class="kpi__label">{{ L.hub.kpi_covered }}</span></li>
+    <li class="kpi"><span class="kpi__value">{{ tickers.size }}</span><span class="kpi__label">{{ L.hub.kpi_listed }}</span></li>
+    <li class="kpi"><span class="kpi__value">{{ pub_reports.size }}</span><span class="kpi__label">{{ L.hub.kpi_reports }}</span></li>
+    <li class="kpi"><span class="kpi__value kpi__value--date">{% if latest_date %}{{ latest_date.date }}{% else %}—{% endif %}</span><span class="kpi__label">{{ L.hub.kpi_latest }}</span></li>
+  </ul>
+
+  <section class="mv-section" aria-labelledby="mv-dir-title">
+    <h2 class="mv-h2" id="mv-dir-title">{{ L.hub.directory }}</h2>
+
+    <noscript><p class="mv-note">{{ L.hub.js_note }}</p></noscript>
+    <form class="mv-controls" id="mv-controls" role="search" hidden>
+      <div class="field field--search">
+        <label for="mv-q">{{ L.hub.search_label }}</label>
+        <input type="search" id="mv-q" name="q" autocomplete="off" placeholder="{{ L.hub.search_placeholder }}">
+      </div>
+      <div class="field">
+        <label for="mv-sector">{{ L.hub.filter_sector }}</label>
+        <select id="mv-sector" name="sector">
+          <option value="">{{ L.hub.all }}</option>
+          {%- for g in sector_groups %}
+          <option value="{{ g.name }}">{{ g.items.first.sector[lang] }}</option>
+          {%- endfor %}
+        </select>
+      </div>
+      <div class="field">
+        <label for="mv-status">{{ L.hub.filter_status }}</label>
+        <select id="mv-status" name="status">
+          <option value="">{{ L.hub.all }}</option>
+          <option value="covered">{{ L.status.covered }}</option>
+          <option value="coming_soon">{{ L.status.coming_soon }}</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="mv-type">{{ L.hub.filter_type }}</label>
+        <select id="mv-type" name="type">
+          <option value="">{{ L.hub.all }}</option>
+          {%- for ty in L.types %}
+          <option value="{{ ty[0] }}">{{ ty[1] }}</option>
+          {%- endfor %}
+        </select>
+      </div>
+      <div class="field">
+        <label for="mv-format">{{ L.hub.filter_format }}</label>
+        <select id="mv-format" name="format">
+          <option value="">{{ L.hub.all }}</option>
+          <option value="pdf">PDF</option>
+          <option value="xlsx">XLSX</option>
+          <option value="docx">DOCX</option>
+          <option value="pptx">PPTX</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="mv-access">{{ L.hub.filter_access }}</label>
+        <select id="mv-access" name="access">
+          <option value="">{{ L.hub.all }}</option>
+          <option value="free">{{ L.access.free }}</option>
+          <option value="contact">{{ L.access.contact }}</option>
+          <option value="subscriber">{{ L.access.subscriber }}</option>
+        </select>
+      </div>
+      <div class="field field--action">
+        <button type="button" class="btn btn--outline btn--sm" id="mv-clear">{{ L.hub.clear }}</button>
+      </div>
+    </form>
+    <p class="mv-count" id="mv-count" role="status" aria-live="polite"></p>
+
+    <section class="mv-subsection" id="mv-report-results" aria-labelledby="mv-rr-title" hidden>
+      <h3 class="mv-h3" id="mv-rr-title">{{ L.hub.reports_heading }}</h3>
+      <div id="mv-report-table"></div>
+    </section>
+
+    <div id="mv-directory">
+      {%- for g in sector_groups %}
+      {%- assign cov = g.items | where: 'status', 'covered' | sort: 'ticker' -%}
+      {%- assign soon = g.items | where: 'status', 'coming_soon' | sort: 'ticker' %}
+      <section class="mv-group" data-group="{{ g.name }}" aria-labelledby="grp-{{ g.name }}">
+        <h3 class="mv-group__title" id="grp-{{ g.name }}">{{ g.items.first.sector[lang] }}</h3>
+        <div class="mv-grid">
+          {%- for t in cov %}{% include merval/ticker-card.html %}{% endfor %}
+          {%- for t in soon %}{% include merval/ticker-card.html %}{% endfor %}
+        </div>
+      </section>
+      {%- endfor %}
+      <p class="mv-empty" id="mv-empty" hidden>{{ L.hub.no_results }}</p>
+    </div>
+  </section>
+
+  <section class="mv-section" aria-labelledby="mv-latest-title">
+    <h2 class="mv-h2" id="mv-latest-title">{{ L.hub.latest }}</h2>
+    {%- if latest_sorted.size > 0 %}
+    {%- assign rows = latest_sorted | slice: 0, 5 -%}
+    {%- assign show_ticker = true -%}
+    {% include merval/report-table.html %}
+    {%- else %}
+    <p class="mv-empty">{{ L.hub.latest_empty }}</p>
+    {%- endif %}
+  </section>
+
+  <p class="mv-disclaimer-link"><a href="{{ lp | append: '/disclaimer/' | relative_url }}">{{ L.hub.all_disclaimer }}</a></p>
+</div>
+
+{% include merval/modals.html %}
+<script type="application/json" id="mv-config">{"lang":{{ lang | jsonify }},"json":{{ '/assets/data/merval.json' | relative_url | jsonify }},"contact":{{ site.contact_form_email | jsonify }},"subscribe":{{ lp | append: '/subscribe/' | relative_url | jsonify }},"ticker_base":{{ lp | append: '/valuations/merval/' | relative_url | jsonify }},"L":{{ L | jsonify }}}</script>

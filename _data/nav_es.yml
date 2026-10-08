@@ -9,14 +9,16 @@
       path: /es/ma#deal-structuring
 
 - title: Valuaciones y Mercados
-  path: /es/valuations
+  path: /es/valuations/
   dropdown:
     - title: Flujo de Caja Descontado
-      path: /es/valuations#dcf
+      path: /es/valuations/#dcf
     - title: Comparables de Mercado
-      path: /es/valuations#comparables
+      path: /es/valuations/#comparables
     - title: Análisis de Escenarios
-      path: /es/valuations#scenarios
+      path: /es/valuations/#scenarios
+    - title: Análisis Merval
+      path: /es/valuations/merval/
 
 - title: Finanzas Corporativas
   path: /es/corporate

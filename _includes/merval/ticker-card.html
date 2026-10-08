@@ -1,0 +1,13 @@
+{%- comment -%} In: t (ticker entry), L, lp, lang, pub_reports. {%- endcomment -%}
+{%- assign trs = pub_reports | where: 'ticker', t.ticker -%}
+<article class="mv-card" data-ticker="{{ t.ticker | downcase }}" data-name="{{ t.company | downcase | escape }}" data-sector="{{ t.sector.id }}" data-status="{{ t.status }}" data-types="{% for r in trs %}{{ r.type }} {% endfor %}" data-formats="{% for r in trs %}{{ r.format }} {% endfor %}" data-access="{% for r in trs %}{{ r.access }} {% endfor %}">
+  <a class="mv-card__link" href="{{ lp | append: '/valuations/merval/' | append: t.ticker | downcase | append: '/' | relative_url }}">
+    <span class="mv-card__ticker">{{ t.ticker }}</span>
+    <span class="mv-card__name">{{ t.company }}</span>
+  </a>
+  <p class="mv-card__desc">{{ t.description[lang] }}</p>
+  <div class="mv-card__badges">
+    <span class="badge badge--{% if t.status == 'covered' %}covered{% else %}soon{% endif %}">{{ L.status[t.status] }}</span>
+    <span class="badge badge--index">{{ t.index }}</span>
+  </div>
+</article>

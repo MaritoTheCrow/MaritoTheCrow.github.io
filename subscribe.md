@@ -1,14 +1,8 @@
 ---
 layout: default
 title: MCB Advisor | Subscribe
+description: "Subscribe to MCB Advisor for full valuation models, Excel and financial data files, and research updates on Argentine listed companies."
+permalink: /subscribe/
+scripts: [forms]
 ---
-
-# Subscribe
-
-To receive our reports, valuation updates and market analysis, send us an email and we will add you to the list.
-
-📧 [Subscribe by email]({{ 'mailto:' | append: site.contact_form_email }}?subject=Subscribe)
-
----
-
-[← Back to Home](/)
+{% include merval/subscribe.html %}

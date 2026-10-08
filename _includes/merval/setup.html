@@ -1,0 +1,9 @@
+{%- comment -%} Shared setup for Merval pages: language strings (L), language prefix (lp), data. {%- endcomment -%}
+{%- if page.lang == 'es' -%}
+  {%- assign L = site.data.merval_i18n.es -%}{%- assign lp = '/es' -%}{%- assign lang = 'es' -%}
+{%- else -%}
+  {%- assign L = site.data.merval_i18n.en -%}{%- assign lp = '' -%}{%- assign lang = 'en' -%}
+{%- endif -%}
+{%- assign tickers = site.data.merval.tickers -%}
+{%- assign all_reports = site.data.merval.reports -%}
+{%- assign pub_reports = all_reports | where_exp: 'r', 'r.pending != true' -%}

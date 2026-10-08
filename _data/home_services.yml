@@ -1,7 +1,7 @@
 # Homepage services row only (4 cards). M&A and Corporate Finance remain in the navbar.
 - title: Valuations
   image: "/1.jpg"
-  path: /valuations
+  path: /valuations/
   description: "Discounted cash flow, trading comparables, and scenario analysis tailored to your reporting needs."
 - title: Due Diligence
   image: "/2.png"

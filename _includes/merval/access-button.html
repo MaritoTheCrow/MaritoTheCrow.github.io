@@ -1,0 +1,21 @@
+{%- comment -%} In: r (report entry), L, lp, lang. One consistent component, three states (+ pending). {%- endcomment -%}
+{%- assign rtitle = r.title[lang] | default: r.title.en -%}
+{%- if r.pending -%}
+  <span class="btn btn--sm btn--disabled" aria-disabled="true">{{ L.access.pending }}</span>
+{%- elsif r.access == 'free' and r.url -%}
+  {%- assign u4 = r.url | slice: 0, 4 -%}
+  {%- if u4 == 'http' -%}
+  <a class="btn btn--sm btn--primary" href="{{ r.url }}" target="_blank" rel="noopener" download><svg class="icon" aria-hidden="true"><use href="#ico-download"></use></svg><span>{{ L.access.download }}</span><span class="visually-hidden"> — {{ rtitle }} ({{ r.format | upcase }})</span></a>
+  {%- else -%}
+  <a class="btn btn--sm btn--primary" href="{{ r.url | relative_url }}" download><svg class="icon" aria-hidden="true"><use href="#ico-download"></use></svg><span>{{ L.access.download }}</span><span class="visually-hidden"> — {{ rtitle }} ({{ r.format | upcase }})</span></a>
+  {%- endif -%}
+{%- elsif r.access == 'contact' -%}
+  {%- capture subj -%}[MCB Advisor] {{ L.access.request }}: {{ r.id }}{%- endcapture -%}
+  {%- capture b1 -%}{{ L.modal.report }}: {{ rtitle }} ({{ r.id }}){%- endcapture -%}
+  {%- capture b2 -%}{{ L.modal.name }}:{%- endcapture -%}
+  {%- capture b3 -%}{{ L.modal.company }}:{%- endcapture -%}
+  {%- capture body -%}{{ b1 | url_encode }}%0A%0A{{ b2 | url_encode }}%0A{{ b3 | url_encode }}{%- endcapture -%}
+  <a class="btn btn--sm btn--secondary js-access" data-access="contact" data-report-id="{{ r.id }}" data-report-title="{{ rtitle | escape }}" href="mailto:{{ site.contact_form_email }}?subject={{ subj | url_encode }}&amp;body={{ body }}"><svg class="icon" aria-hidden="true"><use href="#ico-mail"></use></svg><span>{{ L.access.request }}</span><span class="visually-hidden"> — {{ rtitle }}</span></a>
+{%- else -%}
+  <a class="btn btn--sm btn--outline js-access" data-access="subscriber" data-report-id="{{ r.id }}" data-report-title="{{ rtitle | escape }}" href="{{ lp | append: '/subscribe/' | relative_url }}?report={{ r.id | url_encode }}&amp;ticker={{ r.ticker | url_encode }}"><svg class="icon" aria-hidden="true"><use href="#ico-lock"></use></svg><span>{{ L.access.subscribers_only }}</span><span class="visually-hidden"> — {{ rtitle }}</span></a>
+{%- endif -%}

@@ -9,14 +9,16 @@
       path: /ma#deal-structuring
 
 - title: Valuations & Capital Markets
-  path: /valuations
+  path: /valuations/
   dropdown:
     - title: Discounted Cash Flow
-      path: /valuations#dcf
+      path: /valuations/#dcf
     - title: Trading Comparables
-      path: /valuations#comparables
+      path: /valuations/#comparables
     - title: Scenario Analysis
-      path: /valuations#scenarios
+      path: /valuations/#scenarios
+    - title: Merval Analysis
+      path: /valuations/merval/
 
 - title: Corporate Finance
   path: /corporate

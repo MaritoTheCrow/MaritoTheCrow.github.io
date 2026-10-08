@@ -1,15 +1,9 @@
 ---
 layout: default
 title: MCB Advisor | Suscribirse
+description: "Suscribite a MCB Advisor para recibir modelos de valuación completos, archivos Excel y de datos financieros, y novedades sobre empresas argentinas que cotizan en bolsa."
 lang: es
+permalink: /es/subscribe/
+scripts: [forms]
 ---
-
-# Suscribirse
-
-Para recibir nuestros informes, actualizaciones de valuaciones y análisis de mercado, escribinos un correo y te agregaremos a la lista.
-
-📧 [Suscribirse por correo]({{ 'mailto:' | append: site.contact_form_email }}?subject=Suscripci%C3%B3n)
-
----
-
-[← Volver al Inicio](/es/)
+{% include merval/subscribe.html %}

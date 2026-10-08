@@ -1,0 +1,65 @@
+{%- include merval/setup.html -%}
+{%- include merval/icons.html -%}
+{%- assign t = tickers | where: 'ticker', page.ticker | first -%}
+{%- assign trs = all_reports | where: 'ticker', t.ticker | sort: 'date' | reverse -%}
+{%- assign rated = trs | where_exp: 'r', 'r.rating' | first -%}
+<div class="mv">
+  <nav class="breadcrumbs" aria-label="{{ L.ticker.breadcrumb_label }}">
+    <ol>
+      <li><a href="{{ lp | append: '/' | relative_url }}">{{ L.home }}</a></li>
+      <li><a href="{{ lp | append: '/valuations/' | relative_url }}">{{ L.valuations }}</a></li>
+      <li><a href="{{ lp | append: '/valuations/merval/' | relative_url }}">{{ L.section }}</a></li>
+      <li aria-current="page">{{ t.ticker }}</li>
+    </ol>
+  </nav>
+
+  <header class="mv-hero mv-hero--ticker">
+    <p class="mv-ticker-code">{{ t.ticker }}</p>
+    <h1 class="mv-title mv-title--company">{{ t.company }}</h1>
+    <div class="mv-meta">
+      <span class="badge badge--{% if t.status == 'covered' %}covered{% else %}soon{% endif %}">{{ L.status[t.status] }}</span>
+      <span class="badge badge--index">{{ t.index }}</span>
+      <span class="mv-meta__sector">{{ L.ticker.sector }}: {{ t.sector[lang] }}</span>
+    </div>
+    <p class="mv-lead">{{ t.description[lang] }}</p>
+  </header>
+
+  {%- if t.status == 'covered' %}
+    {%- if rated %}
+    {%- assign num_in = rated.target_price -%}{%- include merval/num.html %}
+    <dl class="rating-box" aria-label="{{ L.ticker.rating }}">
+      <div><dt>{{ L.ticker.rating }}</dt><dd class="rating-box__rating">{{ rated.rating }}</dd></div>
+      {%- if rated.target_price %}
+      <div><dt>{{ L.ticker.target }}</dt><dd class="rating-box__target"><span class="rating-box__cur">{{ rated.currency }}</span> <span class="num">{{ num_out }}</span></dd></div>
+      {%- endif %}
+      <div><dt>{{ L.ticker.as_of }}</dt><dd>{{ rated.date }}</dd></div>
+    </dl>
+    {%- endif %}
+
+    <section class="mv-section" aria-labelledby="mv-rep-title">
+      <h2 class="mv-h2" id="mv-rep-title">{{ L.ticker.reports }}</h2>
+      {%- if trs.size > 0 %}
+      {%- assign rows = trs -%}{%- assign show_ticker = false -%}
+      {% include merval/report-table.html %}
+      <p class="mv-table-note"><a href="{{ lp | append: '/disclaimer/' | relative_url }}">{{ L.hub.all_disclaimer }}</a></p>
+      {%- else %}
+      <p class="mv-empty">{{ L.ticker.no_reports }}</p>
+      {%- endif %}
+    </section>
+  {%- else %}
+    <section class="notice-box" aria-labelledby="mv-soon-title">
+      <p class="notice-box__title" id="mv-soon-title" role="heading" aria-level="2">{{ L.ticker.soon_title }}</p>
+      <p>{{ L.ticker.soon_text }}</p>
+      <a class="btn btn--primary" href="{{ lp | append: '/subscribe/' | relative_url }}?ticker={{ t.ticker | url_encode }}">{{ L.ticker.notify }}</a>
+    </section>
+  {%- endif %}
+
+  <aside class="disclaimer-box" aria-labelledby="mv-disc-title">
+    <p class="disclaimer-box__title" id="mv-disc-title">{{ L.ticker.disclaimer_title }}</p>
+    <p>{{ L.ticker.disclaimer_text }} <a href="{{ lp | append: '/disclaimer/' | relative_url }}">{{ L.ticker.disclaimer_link }}</a>.</p>
+  </aside>
+
+  <p class="mv-back"><a href="{{ lp | append: '/valuations/merval/' | relative_url }}">&larr; {{ L.ticker.back }}</a></p>
+</div>
+
+{% include merval/modals.html %}

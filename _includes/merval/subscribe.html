@@ -1,0 +1,40 @@
+{%- include merval/setup.html -%}
+{%- assign S = L.subscribe -%}
+<div class="mv mv--narrow">
+  <header class="mv-hero">
+    <h1 class="mv-title">{{ S.heading }}</h1>
+    <p class="mv-lead">{{ S.lead }}</p>
+  </header>
+
+  <section class="mv-section" aria-labelledby="sub-gets">
+    <h2 class="mv-h2" id="sub-gets">{{ S.gets_title }}</h2>
+    <ul class="check-list">
+      {%- for g in S.gets %}
+      <li>{{ g }}</li>
+      {%- endfor %}
+    </ul>
+    <p>{{ S.details }}</p>
+  </section>
+
+  <p class="mv-prefill" id="sub-prefill" hidden>{{ S.prefill_report }} <code id="sub-prefill-id"></code></p>
+
+  <form class="contact-form" id="sub-form" action="https://formsubmit.co/{{ site.contact_form_email }}" method="POST">
+    <input type="hidden" name="_subject" value="[MCB Advisor] {{ S.heading }}">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="report_id" id="sub-report" value="">
+    <label class="contact-form__label" for="sub-name">{{ S.name }}</label>
+    <input class="contact-form__input" id="sub-name" name="name" type="text" required autocomplete="name">
+    <label class="contact-form__label" for="sub-email">{{ S.email }}</label>
+    <input class="contact-form__input" id="sub-email" name="email" type="email" required autocomplete="email">
+    <label class="contact-form__label" for="sub-tickers">{{ S.tickers }}</label>
+    <input class="contact-form__input" id="sub-tickers" name="tickers" type="text" placeholder="{{ S.tickers_ph }}">
+    <label class="contact-form__label" for="sub-message">{{ S.message }}</label>
+    <textarea class="contact-form__textarea" id="sub-message" name="message" rows="4"></textarea>
+    <div class="mv-modal__actions">
+      <button type="submit" class="btn btn--primary">{{ S.send }}</button>
+    </div>
+  </form>
+
+  <p class="mv-table-note">{{ S.note_email }} <a href="mailto:{{ site.contact_form_email }}">{{ site.contact_form_email }}</a></p>
+  <p class="mv-back"><a href="{{ lp | append: '/' | relative_url }}">&larr; {{ L.home }}</a></p>
+</div>

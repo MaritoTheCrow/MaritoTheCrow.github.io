@@ -1,0 +1,9 @@
+{%- comment -%} In: size_in (bytes). Out: size_out, e.g. "376,0 KB" / "1,8 MB". {%- endcomment -%}
+{%- assign sb = size_in | default: 0 -%}
+{%- if sb >= 1048576 -%}
+  {%- assign num_in = sb | divided_by: 1048576.0 -%}{%- include merval/num.html -%}{%- assign size_out = num_out | append: ' MB' -%}
+{%- elsif sb > 0 -%}
+  {%- assign num_in = sb | divided_by: 1024.0 -%}{%- include merval/num.html -%}{%- assign size_out = num_out | append: ' KB' -%}
+{%- else -%}
+  {%- assign size_out = '—' -%}
+{%- endif -%}

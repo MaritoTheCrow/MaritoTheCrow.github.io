@@ -1,0 +1,42 @@
+{%- comment -%} Accessible modals (progressive enhancement: access buttons are real links without JS). {%- endcomment -%}
+<div class="mv-modal" id="mv-modal-contact" role="dialog" aria-modal="true" aria-labelledby="mv-modal-contact-title" hidden>
+  <div class="mv-modal__backdrop" data-close></div>
+  <div class="mv-modal__panel" tabindex="-1">
+    <button type="button" class="mv-modal__close" data-close aria-label="{{ L.modal.close }}">&times;</button>
+    <p class="mv-modal__title" id="mv-modal-contact-title" role="heading" aria-level="2">{{ L.modal.request_title }}</p>
+    <p>{{ L.modal.request_intro }}</p>
+    <p class="mv-modal__report"><strong>{{ L.modal.report }}:</strong> <span id="mv-req-title"></span> <code id="mv-req-id"></code></p>
+    <form class="contact-form" action="https://formsubmit.co/{{ site.contact_form_email }}" method="POST">
+      <input type="hidden" name="_subject" id="mv-req-subject" value="[MCB Advisor] {{ L.modal.request_title }}">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="report_id" id="mv-req-hid-id" value="">
+      <input type="hidden" name="report_title" id="mv-req-hid-title" value="">
+      <label class="contact-form__label" for="mv-req-name">{{ L.modal.name }}</label>
+      <input class="contact-form__input" id="mv-req-name" name="name" type="text" required autocomplete="name">
+      <label class="contact-form__label" for="mv-req-email">{{ L.modal.email }}</label>
+      <input class="contact-form__input" id="mv-req-email" name="email" type="email" required autocomplete="email">
+      <label class="contact-form__label" for="mv-req-company">{{ L.modal.company }}</label>
+      <input class="contact-form__input" id="mv-req-company" name="company" type="text" autocomplete="organization">
+      <label class="contact-form__label" for="mv-req-message">{{ L.modal.message }}</label>
+      <textarea class="contact-form__textarea" id="mv-req-message" name="message" rows="4"></textarea>
+      <div class="mv-modal__actions">
+        <button type="submit" class="btn btn--primary">{{ L.modal.send }}</button>
+        <button type="button" class="btn btn--outline" data-close>{{ L.modal.cancel }}</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="mv-modal" id="mv-modal-subscriber" role="dialog" aria-modal="true" aria-labelledby="mv-modal-sub-title" hidden>
+  <div class="mv-modal__backdrop" data-close></div>
+  <div class="mv-modal__panel" tabindex="-1">
+    <button type="button" class="mv-modal__close" data-close aria-label="{{ L.modal.close }}">&times;</button>
+    <p class="mv-modal__title" id="mv-modal-sub-title" role="heading" aria-level="2"><svg class="icon" aria-hidden="true"><use href="#ico-lock"></use></svg> {{ L.modal.sub_title }}</p>
+    <p>{{ L.modal.sub_text }}</p>
+    <p class="mv-modal__report"><strong>{{ L.modal.report }}:</strong> <span id="mv-sub-title"></span> <code id="mv-sub-id"></code></p>
+    <div class="mv-modal__actions">
+      <a class="btn btn--primary" id="mv-sub-link" href="{{ lp | append: '/subscribe/' | relative_url }}">{{ L.modal.subscribe }}</a>
+      <button type="button" class="btn btn--outline" data-close>{{ L.modal.cancel }}</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+{%- comment -%} In: num_in (number). Out: num_out, formatted 1.234,5 (period thousands, comma decimal, one decimal). {%- endcomment -%}
+{%- assign nv = num_in | times: 1.0 | round: 1 | append: '' -%}
+{%- assign np = nv | split: '.' -%}
+{%- assign ip = np[0] -%}
+{%- assign fp = np[1] | default: '0' -%}
+{%- assign ilast = ip.size | minus: 1 -%}
+{%- assign num_out = '' -%}
+{%- for i in (0..ilast) -%}
+  {%- assign ch = ip | slice: i -%}
+  {%- assign num_out = num_out | append: ch -%}
+  {%- assign rem = ilast | minus: i | modulo: 3 -%}
+  {%- if rem == 0 and i != ilast -%}{%- assign num_out = num_out | append: '.' -%}{%- endif -%}
+{%- endfor -%}
+{%- assign num_out = num_out | append: ',' | append: fp -%}
