@@ -142,7 +142,7 @@
   description:
     en: "Financial holding controlling Banco Galicia."
     es: "Holding financiero controlante de Banco Galicia."
-  status: coming_soon
+  status: covered
   verified: false
 
 - ticker: IRSA

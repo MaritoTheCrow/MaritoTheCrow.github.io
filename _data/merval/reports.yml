@@ -3,6 +3,23 @@
 # size_bytes: file size in bytes.  language: en | es | both.
 # batch: release folder (YYYY-MM) the file came from.
 # pending: true marks an entry whose file has not been provided yet.
+- id: ggal-2026-10-09-note-pdf
+  ticker: GGAL
+  type: note
+  date: '2026-10-09'
+  format: pdf
+  size_bytes: 551743
+  access: free
+  language: en
+  title:
+    en: 'Grupo Financiero Galicia – ROE vs Ke: what ROE is the market pricing in?'
+    es: 'Grupo Financiero Galicia – ROE vs Ke: ¿qué ROE descuenta el mercado?'
+  summary:
+    en: At 1.04x book, the market prices in a long-term real ROE of about 12.6%, close to the 13.2% normalized level.
+    es: A 1,04x el valor libro, el mercado descuenta un ROE real de largo plazo de alrededor de 12,6%, cerca del 13,2% normalizado.
+  currency: ARS
+  batch: 2026-10
+  url: /assets/reports/GGAL/2026-10-09_GGAL_note_en.pdf
 - id: agro-2026-10-07-valuation-model-pdf
   ticker: AGRO
   type: valuation_model
