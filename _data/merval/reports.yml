@@ -3,6 +3,23 @@
 # size_bytes: file size in bytes.  language: en | es | both.
 # batch: release folder (YYYY-MM) the file came from.
 # pending: true marks an entry whose file has not been provided yet.
+- id: agro-2026-10-20-note-pdf
+  ticker: AGRO
+  type: technical_note
+  date: '2026-10-20'
+  format: pdf
+  size_bytes: 562200
+  access: free
+  language: en
+  title:
+    en: 'Agrometal - Technical Note: ROE vs Ke'
+    es: 'Agrometal - Nota técnica: ROE vs Ke'
+  summary:
+    en: At 0,72x book the market prices in a 10,4% real ROE, exactly AGRO's full-cycle 2019–25 ROE. Fairly priced for an average cycle.
+    es: A 0,72x el valor libro, el mercado descuenta un ROE real de 10,4%, exactamente el ROE de ciclo completo 2019–25 de AGRO. Precio justo para un ciclo promedio.
+  currency: ARS
+  batch: 2026-10
+  url: /assets/reports/AGRO/2026-10-20_AGRO_note_en.pdf
 - id: ggal-2026-10-09-note-pdf
   ticker: GGAL
   type: note

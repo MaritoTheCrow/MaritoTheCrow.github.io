@@ -16,7 +16,7 @@ Use `py` on Windows (`python3` on Mac/Linux). Run everything from the repo folde
 |--------|----------------|
 | TICKER | any ticker in `_data/merval/tickers.yml` (AGRO, ALUA, ...) |
 | date   | the report date, `2026-01-30` |
-| type   | `initiation`, `update`, `valuation_model`, `financial_data`, `presentation`, `note` |
+| type   | `initiation`, `update`, `valuation_model`, `financial_data`, `presentation`, `note`, `technical_note` |
 | ext    | `pdf`, `xlsx`, `docx`, `pptx` |
 
 Examples: `AGRO_2026-01-30_initiation.pdf`, `AGRO_2026-06-30_valuation_model.xlsx`.

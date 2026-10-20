@@ -74,6 +74,7 @@ en:
     financial_data: "Financial data"
     presentation: "Presentation"
     note: "Note"
+    technical_note: "Technical note"
   access:
     free: "Free"
     contact: "On request"
@@ -197,6 +198,7 @@ es:
     financial_data: "Datos financieros"
     presentation: "Presentación"
     note: "Nota"
+    technical_note: "Nota técnica"
   access:
     free: "Gratis"
     contact: "A pedido"

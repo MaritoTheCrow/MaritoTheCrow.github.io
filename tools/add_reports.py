@@ -54,6 +54,7 @@ TYPES = {
     "financial_data": ("Financial data", "Datos financieros"),
     "presentation": ("Presentation", "Presentación"),
     "note": ("Note", "Nota"),
+    "technical_note": ("Technical note", "Nota técnica"),
 }
 ICON_FORMATS = {"pdf", "xlsx", "docx", "pptx"}
 NAMING_FORMATS = ICON_FORMATS
