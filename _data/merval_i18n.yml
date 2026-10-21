@@ -73,7 +73,7 @@ en:
     valuation_model: "Valuation model"
     financial_data: "Financial data"
     presentation: "Presentation"
-    note: "Note"
+    note: "Technical note"
     technical_note: "Technical note"
   access:
     free: "Free"
@@ -197,7 +197,7 @@ es:
     valuation_model: "Modelo de valuación"
     financial_data: "Datos financieros"
     presentation: "Presentación"
-    note: "Nota"
+    note: "Nota técnica"
     technical_note: "Nota técnica"
   access:
     free: "Gratis"

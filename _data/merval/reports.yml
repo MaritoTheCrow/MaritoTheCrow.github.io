@@ -3,6 +3,23 @@
 # size_bytes: file size in bytes.  language: en | es | both.
 # batch: release folder (YYYY-MM) the file came from.
 # pending: true marks an entry whose file has not been provided yet.
+- id: ggal-2026-10-21-note-pdf
+  ticker: GGAL
+  type: technical_note
+  date: '2026-10-21'
+  format: pdf
+  size_bytes: 567384
+  access: free
+  language: en
+  title:
+    en: 'Grupo Financiero Galicia - Technical Note: ROE vs Ke'
+    es: 'Grupo Financiero Galicia - Nota técnica: ROE vs Ke'
+  summary:
+    en: At 1.01x book the market prices in a 12.2% real ROE, close to GGAL's full-cycle 2019–25 ROE ex the HSBC gain (12.5%). Fairly priced; LTM ROE at 1.3%.
+    es: A 1,01x el valor libro, el mercado descuenta un ROE real de 12,2%, cerca del ROE de ciclo completo 2019–25 de GGAL sin la ganancia de HSBC (12,5%). Precio justo; ROE LTM de 1,3%.
+  currency: ARS
+  batch: 2026-10
+  url: /assets/reports/GGAL/2026-10-21_GGAL_note_en.pdf
 - id: agro-2026-10-20-note-pdf
   ticker: AGRO
   type: technical_note
@@ -20,23 +37,6 @@
   currency: ARS
   batch: 2026-10
   url: /assets/reports/AGRO/2026-10-20_AGRO_note_en.pdf
-- id: ggal-2026-10-09-note-pdf
-  ticker: GGAL
-  type: note
-  date: '2026-10-09'
-  format: pdf
-  size_bytes: 551743
-  access: free
-  language: en
-  title:
-    en: 'Grupo Financiero Galicia – ROE vs Ke: what ROE is the market pricing in?'
-    es: 'Grupo Financiero Galicia – ROE vs Ke: ¿qué ROE descuenta el mercado?'
-  summary:
-    en: At 1.04x book, the market prices in a long-term real ROE of about 12.6%, close to the 13.2% normalized level.
-    es: A 1,04x el valor libro, el mercado descuenta un ROE real de largo plazo de alrededor de 12,6%, cerca del 13,2% normalizado.
-  currency: ARS
-  batch: 2026-10
-  url: /assets/reports/GGAL/2026-10-09_GGAL_note_en.pdf
 - id: agro-2026-10-07-valuation-model-pdf
   ticker: AGRO
   type: valuation_model
