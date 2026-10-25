@@ -3,6 +3,25 @@
 # size_bytes: file size in bytes.  language: en | es | both.
 # batch: release folder (YYYY-MM) the file came from.
 # pending: true marks an entry whose file has not been provided yet.
+- id: alua-2026-10-23-initiation-pdf
+  ticker: ALUA
+  type: initiation
+  date: '2026-10-23'
+  format: pdf
+  size_bytes: 1075197
+  access: free
+  language: en
+  title:
+    en: 'Aluar - Initiation of coverage: Strong fiscal 2026 but the price already discounts it'
+    es: 'Aluar - Inicio de cobertura: Un fuerte ejercicio 2026 que el precio ya descuenta'
+  summary:
+    en: Sell (High Risk) with an ARS 650 target (27% downside). FY2026 sales +39% and EBITDA USD 398m, but at ARS 887 the price implies a 10.2% WACC against our 16.5%; valued 70/30 on DCF and multiples.
+    es: Venta (alto riesgo) con precio objetivo de ARS 650 (27% de baja). Ventas +39% y EBITDA de USD 398m en el ejercicio 2026, pero a ARS 887 el precio implica un WACC de 10,2% frente a nuestro 16,5%; valuado 70/30 por DCF y múltiplos.
+  rating: Sell (High Risk)
+  target_price: 650.0
+  currency: ARS
+  batch: 2026-10
+  url: /assets/reports/ALUA/2026-10-23_ALUA_initiation_en.pdf
 - id: ggal-2026-10-21-note-pdf
   ticker: GGAL
   type: technical_note
